@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
+//! this will be the function with the menu
 int main() {
+
     int option;
+
     char ch = ' ';
     std::cout << "                 /############.                                                                     \n"
                  "             ,####################                                                                  \n"
