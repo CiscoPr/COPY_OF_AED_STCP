@@ -18,7 +18,7 @@ Our 2nd project for the AED classes
 ### Requisitos mínimos:
 
     • Ler dados fornecidos no dataset.zip e criar um ou mais gafos (que serão alvos de operações)
-    • Menu amigável que expõe as funcionalidades implementadas **done**
+    • Menu amigável que expõe as funcionalidades implementadas *done*
     • Calcular a distância mínima (a.k.a melhor percurso) entre duas localidades
     • Versões de local, melhor percurso e mudar de linha:
     • “Local” - tanto pode ser indicada diretamente uma paragem, como um localização (i.e., as coordenadas), onde pode ver as paragens que estejam perto dessa posição.
