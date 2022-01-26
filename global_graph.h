@@ -18,7 +18,7 @@ class global_graph {
 
     int n;        /**<Number of stops*/
     bool hasDir;
-    std::vector<Node> stops;    /**<The list of nodes/stops being represented*/
+    std::vector<Node> nodes;    /**<The list of nodes/stops being represented*/
 
 public:
 

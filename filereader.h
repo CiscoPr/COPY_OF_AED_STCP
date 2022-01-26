@@ -23,6 +23,8 @@ public:
      */
     std::map<std::string, int> readstops();
 
+    void readlcodes();
+
 };
 
 

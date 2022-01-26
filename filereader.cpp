@@ -11,7 +11,8 @@ std::vector<std::string> filereader::readlinescsv(std::string filename) {
     std::string code, name, line, skiiiiiiiiiiip;
     std::string path = "../dataset/"+ filename;
     std::ifstream linesfile{path};
-    std::vector<std::string> lines;
+    std::vector<std::string> lines_name;
+    std::vector<std::string> lines_codes;
     if(!linesfile.is_open())
         std::cout << filename << " doesn't exist!";
     getline(linesfile, skiiiiiiiiiiip);
@@ -19,16 +20,16 @@ std::vector<std::string> filereader::readlinescsv(std::string filename) {
         std::stringstream ss(line);
 
         getline(ss, code, ',');
-
+        lines_codes.push_back(code);
 
         getline(ss, name);
         //std::cout << "Your line's name is: " << name << '\n';
-        lines.push_back(name);
+        lines_name.push_back(name);
     }
     linesfile.close();
-    for(auto i: lines)
+    for(auto i: lines_codes)
         std::cout << i << '\n';
-    return lines;
+    return lines_codes;
 }
 
 
@@ -89,4 +90,9 @@ std::map<std::string, int> filereader::readstops() {
         std::cout << i.first << " " << i.second << std::endl;
     }
     return mapping_stops;
+}
+
+
+void filereader::readlcodes() {
+
 }

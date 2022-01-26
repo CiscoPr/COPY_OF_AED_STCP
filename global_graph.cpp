@@ -7,6 +7,11 @@
 #include "filereader.h"
 
 filereader f2;
+
+global_graph::global_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops+1){}
+
+
+
 void global_graph::addEdge(int src, int dest, int weight) {
-    f2.readstops();
+
 }
