@@ -19,8 +19,8 @@ public:
      * @param code
      * @param direction
      */
-    void readstops(int code, int direction);
-    void associating();
+    void readstops();
+    void associatestops();
 };
 
 

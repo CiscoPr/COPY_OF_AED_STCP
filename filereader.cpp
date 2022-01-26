@@ -1,12 +1,11 @@
 //
 // Created by francisco on 25/01/22.
 //
-
 #include "filereader.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <vector>
+#include <map>
 void filereader::readlinescsv(std::string filename) {
     std::string code, name, line, skiiiiiiiiiiip;
     std::string path = "../dataset/"+ filename;
@@ -29,7 +28,9 @@ void filereader::readlinescsv(std::string filename) {
 }
 
 
-void filereader::readstops(int code, int direction) {
+void filereader::readstops() {
+    std::map<std::string, int> mapping_stops;
+    /*
     std::string filename = "../dataset/line_" + std::to_string(code) + "_" + std::to_string(direction)+".csv";
     std::ifstream stopsfile{filename};
     int i = 0;
@@ -52,4 +53,36 @@ void filereader::readstops(int code, int direction) {
             std::cout << "On this line, the " + std::to_string(i) +"th stop is: " + stop+ '\n';
     }
     stopsfile.close();
+     */
+    std::string filename = "../dataset/stops.csv";
+    std::ifstream stops_file{filename};
+    std::string first_line, line;
+    if (!stops_file.is_open())
+        std::cout << filename << " doesn't exist!";
+    getline(stops_file, first_line);
+    int i = 0;
+    while (getline(stops_file, line)) {
+        i++;
+        std::stringstream ss(line);
+        std::string code;
+        std::getline(ss, code, ',');
+        mapping_stops[code] = i;
+        std::string name;
+        std::getline(ss, name, ',');
+        std::string zone;
+        std::getline(ss, zone, ',');
+        std::string latitude;
+        std::getline(ss, latitude, ',');
+        std::string longitude;
+        std::getline(ss, longitude);
+        //ss >> code >> name >> zone >> latitude >> longitude;
+        std::cout << code << " " << name << " " << zone << " " << latitude << " " << longitude << '\n';
+
+    }
+    stops_file.close();
+}
+
+
+void filereader::associatestops() {
+
 }

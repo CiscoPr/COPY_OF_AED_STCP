@@ -41,13 +41,7 @@ int main() {
         //main();
     }
     if(option == 2){
-        int code, direction;
-        std::cout << "What is the code of the line you want to see? ";
-        std::cin >> code;
-        std::cout << "What about its direction? Use 0 for the\n";
-        std::cout << "original direction, or 1 for inverted direction ";
-        std::cin >> direction;
-        f1.readstops(code, direction);
+        f1.readstops();
         //main();
     }
     if(option == 4){
