@@ -90,6 +90,12 @@ build CMakeFiles/STCP_AED_project.dir/filereader.cpp.o: CXX_COMPILER__STCP_AED_p
   OBJECT_DIR = CMakeFiles/STCP_AED_project.dir
   OBJECT_FILE_DIR = CMakeFiles/STCP_AED_project.dir
 
+build CMakeFiles/STCP_AED_project.dir/global_graph.cpp.o: CXX_COMPILER__STCP_AED_project_Debug /home/francisco/CLionProjects/STCP_AED_project/global_graph.cpp || cmake_object_order_depends_target_STCP_AED_project
+  DEP_FILE = CMakeFiles/STCP_AED_project.dir/global_graph.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/STCP_AED_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/STCP_AED_project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target STCP_AED_project
@@ -98,7 +104,7 @@ build CMakeFiles/STCP_AED_project.dir/filereader.cpp.o: CXX_COMPILER__STCP_AED_p
 #############################################
 # Link the executable STCP_AED_project
 
-build STCP_AED_project: CXX_EXECUTABLE_LINKER__STCP_AED_project_Debug CMakeFiles/STCP_AED_project.dir/main.cpp.o CMakeFiles/STCP_AED_project.dir/menu.cpp.o CMakeFiles/STCP_AED_project.dir/filereader.cpp.o
+build STCP_AED_project: CXX_EXECUTABLE_LINKER__STCP_AED_project_Debug CMakeFiles/STCP_AED_project.dir/main.cpp.o CMakeFiles/STCP_AED_project.dir/menu.cpp.o CMakeFiles/STCP_AED_project.dir/filereader.cpp.o CMakeFiles/STCP_AED_project.dir/global_graph.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/STCP_AED_project.dir
   POST_BUILD = :
