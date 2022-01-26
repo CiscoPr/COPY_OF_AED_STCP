@@ -6,6 +6,8 @@
 #define STCP_AED_PROJECT_FILEREADER_H
 #include <iostream>
 #include <string>
+#include <map>
+#include <vector>
 
 class filereader {
 public:
@@ -13,14 +15,14 @@ public:
      *
      * @param filename
      */
-    void readlinescsv(std::string filename);
+    std::vector<std::string> readlinescsv(std::string filename);
     /**
      *
      * @param code
      * @param direction
      */
-    void readstops();
-    void associatestops();
+    std::map<std::string, int> readstops();
+
 };
 
 

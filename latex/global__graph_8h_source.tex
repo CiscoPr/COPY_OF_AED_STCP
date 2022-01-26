@@ -1,0 +1,34 @@
+\hypertarget{global__graph_8h_source}{}\doxysection{global\+\_\+graph.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by francisco on 26/01/22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef STCP\_AED\_PROJECT\_GLOBAL\_GRAPH\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define STCP\_AED\_PROJECT\_GLOBAL\_GRAPH\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__graph}{global\_graph}} \{}
+\DoxyCodeLine{10     \textcolor{keyword}{struct }Edge\{}
+\DoxyCodeLine{11         \textcolor{keywordtype}{int} dest;         }
+\DoxyCodeLine{12         \textcolor{keywordtype}{int} weight;       }
+\DoxyCodeLine{13     \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{struct }Node\{}
+\DoxyCodeLine{16         std::list<Edge> adj;}
+\DoxyCodeLine{17     \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} n;        }
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} hasDir;}
+\DoxyCodeLine{21     std::vector<Node> stops;    }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classglobal__graph}{global\_graph}}(\textcolor{keywordtype}{int} stops, \textcolor{keywordtype}{bool} dir = \textcolor{keyword}{true});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} addEdge(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest, \textcolor{keywordtype}{int} weight);}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//STCP\_AED\_PROJECT\_GLOBAL\_GRAPH\_H}}
+
+\end{DoxyCode}

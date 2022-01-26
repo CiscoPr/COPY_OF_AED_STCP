@@ -6,29 +6,33 @@
 #include <fstream>
 #include <sstream>
 #include <map>
-void filereader::readlinescsv(std::string filename) {
+#include <vector>
+std::vector<std::string> filereader::readlinescsv(std::string filename) {
     std::string code, name, line, skiiiiiiiiiiip;
     std::string path = "../dataset/"+ filename;
     std::ifstream linesfile{path};
-
+    std::vector<std::string> lines;
     if(!linesfile.is_open())
         std::cout << filename << " doesn't exist!";
     getline(linesfile, skiiiiiiiiiiip);
     while (getline(linesfile, line)){
         std::stringstream ss(line);
-        std::string code;
+
         getline(ss, code, ',');
 
-        std::string name;
-        getline(ss, name);
-        std::cout << "Your line's name is: " << name << '\n';
 
+        getline(ss, name);
+        //std::cout << "Your line's name is: " << name << '\n';
+        lines.push_back(name);
     }
     linesfile.close();
+    for(auto i: lines)
+        std::cout << i << '\n';
+    return lines;
 }
 
 
-void filereader::readstops() {
+std::map<std::string, int> filereader::readstops() {
     std::map<std::string, int> mapping_stops;
     /*
     std::string filename = "../dataset/line_" + std::to_string(code) + "_" + std::to_string(direction)+".csv";
@@ -76,13 +80,13 @@ void filereader::readstops() {
         std::string longitude;
         std::getline(ss, longitude);
         //ss >> code >> name >> zone >> latitude >> longitude;
-        std::cout << code << " " << name << " " << zone << " " << latitude << " " << longitude << '\n';
+        //std::cout << code << " " << name << " " << zone << " " << latitude << " " << longitude << '\n';
 
     }
     stops_file.close();
-}
 
-
-void filereader::associatestops() {
-
+    for(auto i : mapping_stops){
+        std::cout << i.first << " " << i.second << std::endl;
+    }
+    return mapping_stops;
 }

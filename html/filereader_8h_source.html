@@ -74,19 +74,20 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define STCP_AED_PROJECT_FILEREADER_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classfilereader.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classfilereader.html">filereader</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfilereader.html#a253cfa5fefa447caf7066178a974ea2c">readlinescsv</a>(std::string filename);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfilereader.html#ae904ee9970ab2a66ed2ae659ebe568a8">readstops</a>(<span class="keywordtype">int</span> code, <span class="keywordtype">int</span> direction);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> associating();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classfilereader.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classfilereader.html">filereader</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfilereader.html#a253cfa5fefa447caf7066178a974ea2c">readlinescsv</a>(std::string filename);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::map&lt;std::string, int&gt; <a class="code hl_function" href="classfilereader.html#aceea019d6c1fe5f62b1cb9cc8e191d51">readstops</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">//STCP_AED_PROJECT_FILEREADER_H</span></div>
-<div class="ttc" id="aclassfilereader_html"><div class="ttname"><a href="classfilereader.html">filereader</a></div><div class="ttdef"><b>Definition:</b> filereader.h:10</div></div>
-<div class="ttc" id="aclassfilereader_html_a253cfa5fefa447caf7066178a974ea2c"><div class="ttname"><a href="classfilereader.html#a253cfa5fefa447caf7066178a974ea2c">filereader::readlinescsv</a></div><div class="ttdeci">void readlinescsv(std::string filename)</div><div class="ttdef"><b>Definition:</b> filereader.cpp:10</div></div>
-<div class="ttc" id="aclassfilereader_html_ae904ee9970ab2a66ed2ae659ebe568a8"><div class="ttname"><a href="classfilereader.html#ae904ee9970ab2a66ed2ae659ebe568a8">filereader::readstops</a></div><div class="ttdeci">void readstops(int code, int direction)</div><div class="ttdef"><b>Definition:</b> filereader.cpp:32</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">//STCP_AED_PROJECT_FILEREADER_H</span></div>
+<div class="ttc" id="aclassfilereader_html"><div class="ttname"><a href="classfilereader.html">filereader</a></div><div class="ttdef"><b>Definition:</b> filereader.h:11</div></div>
+<div class="ttc" id="aclassfilereader_html_a253cfa5fefa447caf7066178a974ea2c"><div class="ttname"><a href="classfilereader.html#a253cfa5fefa447caf7066178a974ea2c">filereader::readlinescsv</a></div><div class="ttdeci">void readlinescsv(std::string filename)</div><div class="ttdef"><b>Definition:</b> filereader.cpp:9</div></div>
+<div class="ttc" id="aclassfilereader_html_aceea019d6c1fe5f62b1cb9cc8e191d51"><div class="ttname"><a href="classfilereader.html#aceea019d6c1fe5f62b1cb9cc8e191d51">filereader::readstops</a></div><div class="ttdeci">std::map&lt; std::string, int &gt; readstops()</div><div class="ttdef"><b>Definition:</b> filereader.cpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
