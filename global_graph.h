@@ -14,6 +14,8 @@ class global_graph {
 
     struct Node{
         std::list<Edge> adj;
+        float longitude;
+        float latitude;
     };
 
     int n;        /**<Number of stops*/

@@ -8,7 +8,7 @@
 #include <string>
 #include <map>
 #include <vector>
-
+#include "global_graph.h"
 class filereader {
 public:
     /**
@@ -22,8 +22,7 @@ public:
      * @param direction
      */
     std::map<std::string, int> readstops();
-
-    void readlcodes();
+    int number_of_stops();
 
 };
 

@@ -7,6 +7,19 @@
 #include <sstream>
 #include <map>
 #include <vector>
+
+int number_of_stops(){
+    std::string line, first_line, filename = "../dataset/stops.csv";
+    int numberstops = 0;
+    std::ifstream stops{filename};
+    getline(stops, first_line);
+    while(getline(stops, line)){
+        numberstops++;
+    }
+    return numberstops;
+}
+
+
 std::vector<std::string> filereader::readlinescsv(std::string filename) {
     std::string code, name, line, skiiiiiiiiiiip;
     std::string path = "../dataset/"+ filename;
@@ -92,7 +105,3 @@ std::map<std::string, int> filereader::readstops() {
     return mapping_stops;
 }
 
-
-void filereader::readlcodes() {
-
-}
