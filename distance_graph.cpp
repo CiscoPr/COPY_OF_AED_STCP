@@ -15,11 +15,13 @@ distance_graph::distance_graph(int stops, bool dir): n(stops), hasDir(dir), node
 void distance_graph::stops(){
     int n=f2.number_of_stops();
     std::string filename = "../dataset/stops.csv";
+    std::string first_line;
     std::ifstream stops;
     stops.open(filename);
     if(!stops.is_open()){
         std::cout << filename << " doesn't exist!";
     }
+    getline(stops,first_line);
     for(int i=1;i<=n;i++){
         map_stops=f2.stops_code(stops,n,map_stops);
         nodes[i].name=f2.stops_name(stops);
@@ -46,8 +48,7 @@ void distance_graph::edges() {
         getline(edges, string_n);
         line = f2.stops(edges);
         n = stoi(string_n);
-        for (int i = 2;
-             i <= n + 1; i++) {                                //if something goes wrong, we should check here
+        for (int i = 2; i <= n + 1; i++) {                                //if something goes wrong, we should check here
             first_stop = line;
             second_stop = f2.stops(edges);
             line = second_stop;

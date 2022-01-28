@@ -70,7 +70,7 @@ double filereader::stops_latitude(std::ifstream &file){
 double filereader::stops_longitude(std::ifstream &file){
     std::string longitude;
     double double_longitude;
-    getline(file, longitude, ',');
+    getline(file, longitude);
     double_longitude= std::stod(longitude);
     return double_longitude;
 }
