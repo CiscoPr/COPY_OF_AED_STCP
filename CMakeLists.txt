@@ -3,4 +3,4 @@ project(STCP_AED_project)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(STCP_AED_project main.cpp menu.cpp menu.h filereader.cpp filereader.h distance_graph.cpp distance_graph.h minHeap.h)
+add_executable(STCP_AED_project main.cpp menu.cpp menu.h filereader.cpp filereader.h distance_graph.cpp distance_graph.h minHeap.h lesschanges_graph.cpp lesschanges_graph.h)
