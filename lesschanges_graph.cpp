@@ -7,14 +7,14 @@
 #include <climits>
 #include "minHeap.h"
 
-filereader f2;
+filereader f1;
 
 
+/*
+lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
 
-distance_graph::distance_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
-
-void distance_graph::stops(){
-    int n=f2.number_of_stops();
+void lesschanges_graph::stops(){
+    int n=f1.number_of_stops();
     std::string filename = "../dataset/stops.csv";
     std::ifstream stops;
     stops.open(filename);
@@ -22,35 +22,37 @@ void distance_graph::stops(){
         std::cout << filename << " doesn't exist!";
     }
     for(int i=1;i<=n;i++){
-        map_stops=f2.stops_code(stops,n,map_stops);
-        nodes[i].name=f2.stops_name(stops);
-        nodes[i].zone=f2.stops_zone(stops);
-        nodes[i].latitude=f2.stops_latitude(stops);
-        nodes[i].longitude=f2.stops_longitude(stops);
+        map_stops=f1.stops_code(stops,n,map_stops);
+        nodes[i].name=f1.stops_name(stops);
+        nodes[i].zone=f1.stops_zone(stops);
+        nodes[i].latitude=f1.stops_latitude(stops);
+        nodes[i].longitude=f1.stops_longitude(stops);
     }
     stops.close();
 }
-void distance_graph::addEdge(int src, int dest, double distance) {
+
+void lesschanges_graph::addEdge(int src, int dest, double distance) {
     if (src<1 || src>n || dest<1 || dest>n) return;
     nodes[src].adj.push_back({dest, distance});
-    if (!hasDir) nodes[dest].adj.push_back({src, distance});
+    if (!hasDir) nodes[dest].adj.push_back({src, distance};
 }
-void distance_graph::edges() {
+
+void lesschanges_graph::edges() {
     std::vector<std::string> codes;
     std::string string_n, line, first_stop, second_stop;
     double distance;
     int n, node, node_1, node_2;
-    codes = f2.lines();
+    codes = f1.lines();
     for (int i = 0; i < codes.size(); i++) {
         std::string filename = "../dataset/line_" + codes[i] + "_0.csv";
         std::ifstream edges{filename};
         getline(edges, string_n);
-        line = f2.stops(edges);
+        line = f1.stops(edges);
         n = stoi(string_n);
         for (int i = 2;
              i <= n + 1; i++) {                                //if something goes wrong, we should check here
             first_stop = line;
-            second_stop = f2.stops(edges);
+            second_stop = f1.stops(edges);
             line = second_stop;
             node_1 = map_stops[first_stop];
             node_2 = map_stops[second_stop];
@@ -64,12 +66,12 @@ void distance_graph::edges() {
         std::string filename = "../dataset/line_" + codes[i] + "_1.csv";
         std::ifstream edges{filename};
         getline(edges, string_n);
-        line = f2.stops(edges);
+        line = f1.stops(edges);
         n = stoi(string_n);
         for (int i = 2;
              i <= n + 1; i++) {                                //if something goes wrong, we should check here
             first_stop = line;
-            second_stop = f2.stops(edges);
+            second_stop = f1.stops(edges);
             line = second_stop;
             node_1 = map_stops[first_stop];
             node_2 = map_stops[second_stop];
@@ -81,7 +83,7 @@ void distance_graph::edges() {
     }
 }
 
-double distance_graph::haversine(double lat1, double lon1, double lat2, double lon2){
+double lesschanges_graph::haversine(double lat1, double lon1, double lat2, double lon2){
     // distance between latitudes
     // and longitudes
     double dLat = (lat2 - lat1) * M_PI / 180.0;
@@ -99,13 +101,13 @@ double distance_graph::haversine(double lat1, double lon1, double lat2, double l
 }
 
 
-int distance_graph::dijkstra_distance(int origin, int destination) {
+int lesschanges_graph::dijkstra_distance(int origin, int destination) {
     dijkstra(origin);
     if(nodes[destination].dist == INT_MAX) return -1;
     return nodes[destination].dist;
 }
 
-std::list<int> distance_graph::dijkstra_path(int origin, int destination) {
+std::list<int> lesschanges_graph::dijkstra_path(int origin, int destination) {
     dijkstra(origin);
     std::list<int> path;
     if(nodes[destination].dist == INT_MAX) return path;
@@ -120,7 +122,7 @@ std::list<int> distance_graph::dijkstra_path(int origin, int destination) {
 }
 
 
-void distance_graph::dijkstra(int s) {
+void lesschanges_graph::dijkstra(int s) {
     MinHeap<int, int> q(n, -1);
     for (int v= 1; v <= n; v++){
         nodes[v].dist = INT_MAX;
@@ -144,3 +146,4 @@ void distance_graph::dijkstra(int s) {
         }
     }
 }
+*/

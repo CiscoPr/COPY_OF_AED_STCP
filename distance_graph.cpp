@@ -150,6 +150,7 @@ std::string distance_graph::get_code(int index){
             return i.first;
         }
     }
+    return "not found";
 }
 std::string distance_graph::closeststop(double latitude, double longitude){
     string code;

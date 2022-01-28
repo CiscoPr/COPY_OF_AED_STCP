@@ -101,10 +101,10 @@
 		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/main.cpp">
 			<Option target="STCP_AED_project"/>
 		</Unit>
-		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/menu.cpp">
+		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/menu_trip.cpp">
 			<Option target="STCP_AED_project"/>
 		</Unit>
-		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/menu.h">
+		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/menu_trip.h">
 			<Option target="STCP_AED_project"/>
 		</Unit>
 		<Unit filename="C:/Proj_AED_02/COPY_OF_AED_STCP/minHeap.h">
