@@ -26,8 +26,9 @@ std::vector<std::string> filereader::lines(){
         std::cout << filename << " doesn't exist!";
     }
     getline(lines,first_line);
-    while(getline(lines,line)){
+    while(getline(lines,line,',')){
         codes.push_back(line);
+        getline(lines,line);
     }
     lines.close();
     return codes;

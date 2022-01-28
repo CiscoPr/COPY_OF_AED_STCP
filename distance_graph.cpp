@@ -1,10 +1,11 @@
-    #include "distance_graph.h"
+#include "distance_graph.h"
 #include <iostream>
 #include <fstream>
 #include "filereader.h"
 #include <cmath>
 #include <climits>
 #include "minHeap.h"
+#define INF (INT_MAX/2)
 
 filereader f2;
 
@@ -101,15 +102,16 @@ double distance_graph::haversine(double lat1, double lon1, double lat2, double l
 
 int distance_graph::dijkstra_distance(int origin, int destination) {
     dijkstra(origin);
-    if(nodes[destination].dist == INT_MAX) return -1;
+    if(nodes[destination].dist == INF) return -1;
     std::cout << nodes[destination].dist;
     return nodes[destination].dist;
 }
 
+
 std::list<int> distance_graph::dijkstra_path(int origin, int destination) {
     dijkstra(origin);
     std::list<int> path;
-    if(nodes[destination].dist == INT_MAX) return path;
+    if(nodes[destination].dist == INF) return path;
     path.push_back(destination);
     int v = destination;
     while(v != origin){
@@ -124,8 +126,8 @@ std::list<int> distance_graph::dijkstra_path(int origin, int destination) {
 void distance_graph::dijkstra(int s) {
     MinHeap<int, int> q(n, -1);
     for (int v= 1; v <= n; v++){
-        nodes[v].dist = INT_MAX;
-        q.insert(v, INT_MAX);
+        nodes[v].dist = INF;
+        q.insert(v, INF);
         nodes[v].visited = false;
     }
     nodes[s].dist = 0;
