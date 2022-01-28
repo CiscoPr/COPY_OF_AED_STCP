@@ -38,17 +38,20 @@ int main() {
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
     if(option == 1){
-        std::string origin, destination;
+        double latitude, longitude;
+        std::string destination;
         std::cout << '\n';
-        std::cout << "                       What will be your first stop? Put                                       \n"
-                     "                       its name in here! ";
-        std::cin >> origin;
+        std::cout << "                       Where are you at the moment? Put                                        \n"
+                     "                       latitude in here! ";
+        std::cin >> latitude;
         std::cout << '\n',
+        std::cout << "                       Put longitude in here!                                                  \n";
+        std::cin  >> longitude;
         std::cout << "                       To what stop do you wish to go? Put                                     \n"
                      "                       its name in here! ";
         std::cin >> destination;
         std::cout << '\n';
-
+        
     }
     if(option == 2){
         //f1.readstops();

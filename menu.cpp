@@ -5,6 +5,3 @@
 #include "menu.h"
 #include <iostream>
 
-int menu(){
-
-}
