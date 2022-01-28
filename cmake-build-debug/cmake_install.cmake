@@ -1,4 +1,4 @@
-# Install script for directory: /home/francisco/CLionProjects/STCP_AED_project
+# Install script for directory: /home/francisco/Documents/STCP_AED_project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/francisco/CLionProjects/STCP_AED_project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/francisco/Documents/STCP_AED_project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

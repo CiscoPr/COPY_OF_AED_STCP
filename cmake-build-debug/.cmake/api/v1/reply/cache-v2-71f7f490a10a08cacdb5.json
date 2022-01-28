@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/francisco/CLionProjects/STCP_AED_project/cmake-build-debug"
+			"value" : "/home/francisco/Documents/STCP_AED_project/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/francisco/CLionProjects/STCP_AED_project"
+			"value" : "/home/francisco/Documents/STCP_AED_project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/francisco/CLionProjects/STCP_AED_project/cmake-build-debug"
+			"value" : "/home/francisco/Documents/STCP_AED_project/cmake-build-debug"
 		},
 		{
 			"name" : "STCP_AED_project_IS_TOP_LEVEL",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/francisco/CLionProjects/STCP_AED_project"
+			"value" : "/home/francisco/Documents/STCP_AED_project"
 		}
 	],
 	"kind" : "cache",

@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__STCP_AED_project_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/clion/178/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/francisco/CLionProjects/STCP_AED_project -B/home/francisco/CLionProjects/STCP_AED_project/cmake-build-debug
+  command = /snap/clion/178/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/francisco/Documents/STCP_AED_project -B/home/francisco/Documents/STCP_AED_project/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

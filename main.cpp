@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "filereader.h"
+#include "distance_graph.h"
 
 
 //! this will be the function with the menu
@@ -29,7 +30,7 @@ int main() {
     std::cout << "                                 Welcome to STCP!                                                  \n"
                  "                               How can we help you?                                                \n"
                  "                                                                                                   \n"
-                 "                           1-display every line                                                    \n"
+                 "                           1-get the shortest path                                                 \n"
                  "                           2-display the stops of a certain line                                   \n"
                  "                           3-get the minimum distance between two places                           \n"
                  "                           4-exit                                                                  "<< std::endl;
@@ -37,8 +38,17 @@ int main() {
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
     if(option == 1){
-        //f1.readlinescsv("lines.csv");
-        //main();
+        std::string origin, destination;
+        std::cout << '\n';
+        std::cout << "                       What will be your first stop? Put                                       \n"
+                     "                       its name in here! ";
+        std::cin >> origin;
+        std::cout << '\n',
+        std::cout << "                       To what stop do you wish to go? Put                                     \n"
+                     "                       its name in here! ";
+        std::cin >> destination;
+        std::cout << '\n';
+
     }
     if(option == 2){
         //f1.readstops();
