@@ -101,6 +101,7 @@ double distance_graph::haversine(double lat1, double lon1, double lat2, double l
 int distance_graph::dijkstra_distance(int origin, int destination) {
     dijkstra(origin);
     if(nodes[destination].dist == INT_MAX) return -1;
+    std::cout << nodes[destination].dist;
     return nodes[destination].dist;
 }
 
@@ -142,5 +143,24 @@ void distance_graph::dijkstra(int s) {
             }
         }
     }
-    std::
+}
+std::string distance_graph::get_code(int index){
+    for(auto i: map_stops){
+        if(i.second == index){
+            return i.first;
+        }
+    }
+}
+std::string distance_graph::closeststop(double latitude, double longitude){
+    string code;
+    double distance;
+    double min_dist;
+    for (int i=1; i<nodes.size();i++){
+        distance=haversine(latitude,longitude,nodes[i].latitude,nodes[i].longitude);
+        if(min_dist<distance){
+            min_dist=distance;
+            code= get_code(i);
+        }
+    }
+    return code;
 }

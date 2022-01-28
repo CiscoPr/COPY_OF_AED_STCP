@@ -1,3 +1,3 @@
-C:/Proj_AED_02/COPY_OF_AED_STCP/cmake-build-debug/CMakeFiles/STCP_AED_project.dir
-C:/Proj_AED_02/COPY_OF_AED_STCP/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Proj_AED_02/COPY_OF_AED_STCP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/francisco/Documents/STCP_AED_project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/francisco/Documents/STCP_AED_project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/francisco/Documents/STCP_AED_project/cmake-build-debug/CMakeFiles/STCP_AED_project.dir
