@@ -37,11 +37,11 @@ int main() {
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
     if(option == 1){
-        f1.readlinescsv("lines.csv");
+        //f1.readlinescsv("lines.csv");
         //main();
     }
     if(option == 2){
-        f1.readstops();
+        //f1.readstops();
         //main();
     }
     if(option == 4){
