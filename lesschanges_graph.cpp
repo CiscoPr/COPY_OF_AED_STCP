@@ -6,13 +6,36 @@
 #include <cmath>
 #include <climits>
 #include "minHeap.h"
+#include "lesschanges_graph.h"
+#include <queue>
 
-filereader f1;
+
+
+
+lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
+
+void lesschanges_graph::bfs(int v){
+    for(int v = 1; v <= n; v++)
+        nodes[v].visited = false;
+    queue<int> q;
+    q.push(v);
+    nodes[v].visited = true;
+    while(!q.empty()){
+        int u = q.front();
+        q.pop();
+        cout << u << " ";
+        for(auto e: nodes[u].adj){
+            int w = e.dest;
+            if(!nodes[w].visited){
+                q.push(w);
+                nodes[w].visited;
+            }
+        }
+    }
+}
 
 
 /*
-lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
-
 void lesschanges_graph::stops(){
     int n=f1.number_of_stops();
     std::string filename = "../dataset/stops.csv";

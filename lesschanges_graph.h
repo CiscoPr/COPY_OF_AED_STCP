@@ -9,12 +9,12 @@
 class lesschanges_graph {
     struct Edge{
         int dest;         /**<The integer associated with each stop*/
-        int weight;       /**<Probabbly will be distance*/
+        //int weight;       /**<Probabbly will be distance*/
     };
 
     struct Node{
         std::list<Edge> adj;
-        int dist;
+        //int dist;
         int pred;
         std::string name;
         std::string zone;
@@ -30,12 +30,13 @@ class lesschanges_graph {
 public:
 
     lesschanges_graph(int stops, bool dir = true);
+    void bfs(int v);
     void stops();
     void edges();
     void addEdge(int src, int dest, double distance);
-    int dijkstra_distance(int origin, int destination);
-    std::list<int> dijkstra_path(int origin, int destination);
-    void dijkstra(int s);
+    //int dijkstra_distance(int origin, int destination);
+   // std::list<int> dijkstra_path(int origin, int destination);
+    //void dijkstra(int s);
     double haversine(double lat1, double lon1, double lat2, double lon2);
 };
 

@@ -1,4 +1,4 @@
-#include "distance_graph.h"
+    #include "distance_graph.h"
 #include <iostream>
 #include <fstream>
 #include "filereader.h"
@@ -144,24 +144,26 @@ void distance_graph::dijkstra(int s) {
         }
     }
 }
-std::string distance_graph::get_code(int index){
-    for(auto i: map_stops){
-        if(i.second == index){
-            return i.first;
-        }
-    }
-    return "not found";
+std::string distance_graph::get_name(int index){
+    std::string name;
+    name=nodes[index].name;
+    return name;
 }
-std::string distance_graph::closeststop(double latitude, double longitude){
-    string code;
+int distance_graph::get_index(std::string stop){
+    int index;
+    index=map_stops[stop];
+    return index;
+}
+int distance_graph::closeststop(double latitude, double longitude){
+    int index;
     double distance;
     double min_dist;
     for (int i=1; i<nodes.size();i++){
         distance=haversine(latitude,longitude,nodes[i].latitude,nodes[i].longitude);
         if(min_dist<distance){
             min_dist=distance;
-            code= get_code(i);
+            index=i;
         }
     }
-    return code;
+    return index;
 }

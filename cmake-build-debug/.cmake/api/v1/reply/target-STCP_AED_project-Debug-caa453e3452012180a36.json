@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "STCP_AED_project.exe"
-		},
-		{
-			"path" : "STCP_AED_project.pdb"
+			"path" : "STCP_AED_project"
 		}
 	],
 	"backtrace" : 1,
@@ -75,16 +72,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "STCP_AED_project",
-	"nameOnDisk" : "STCP_AED_project.exe",
+	"nameOnDisk" : "STCP_AED_project",
 	"paths" : 
 	{
 		"build" : ".",

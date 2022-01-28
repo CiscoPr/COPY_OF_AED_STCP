@@ -40,8 +40,11 @@ int main() {
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
     if(option == 1){
+        std::list<int> path;
+        std::list<int>::iterator it;
+        int index, destination_index;
         double latitude, longitude;
-        std::string destination;
+        std::string destination,stop;
         std::cout << '\n';
         std::cout << "                       Where are you at the moment? Put                                        \n"
                      "                       latitude in here! ";
@@ -54,7 +57,16 @@ int main() {
                      "                       its code in here! ";
         std::cin >> destination;
         std::cout << '\n';
-
+        distance_graph graph= distance_graph(f1.number_of_stops(),true);
+        graph.stops();
+        graph.edges();
+        index=graph.closeststop(latitude,longitude);
+        destination_index=graph.get_index(destination);
+        path = graph.dijkstra_path(index,destination_index);
+        for(it=path.begin(); it!= path.end();it++){
+            stop=*it;
+            std::cout<< stop << "\n";
+        }
     }
     if(option == 2){
         double latitude, longitude;

@@ -37,8 +37,9 @@ public:
     std::list<int> dijkstra_path(int origin, int destination);
     void dijkstra(int s);
     double haversine(double lat1, double lon1, double lat2, double lon2);
-    std::string closeststop(double latitude, double longitude);
-    std::string get_code(int index);
+    int closeststop(double latitude, double longitude);
+    std::string get_name(int index);
+    int get_index(std::string stop);
 };
 
 
