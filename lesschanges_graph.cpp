@@ -9,12 +9,13 @@
 #include "lesschanges_graph.h"
 #include <queue>
 #include <vector>
-
+#include <stack>
 filereader f3;
 
 lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
 
-queue<int> lesschanges_graph::bfs(int start, int end){
+void lesschanges_graph::bfs(int start, int end){
+    /*
     //vector<std::string> stops_vector;
     std::queue<int> path;
     for(int v = 1; v <= n; v++)
@@ -41,10 +42,36 @@ queue<int> lesschanges_graph::bfs(int start, int end){
                 nodes[w].dist = nodes[u].dist + 1;
             }
         */
+    queue<int> q;
+    for(int v = 1; v <= n; v++){
+        nodes[v].visited = false;
+        nodes[v].pred = -1;
+    }
+    q.push(start);
+    nodes[start].visited = true;
+    while(!q.empty()){
+        int temp = q.front();
+        q.pop();
+        for(auto k: nodes[temp].adj){
+            int w = k.dest;
+            if(nodes[w].visited == false){
+                q.push(w);
+                nodes[w].visited = true;
+                nodes[w].pred = temp;
+            }
         }
+    }
 }
 
-
+stack<int> lesschanges_graph::print_path(int s, int d) {
+    bfs(s,d);
+    stack<int> st;
+    while(nodes[d].pred != -1){
+        st.push(d);
+        d = nodes[d].pred;
+    }
+    return st;
+}
 
 
 

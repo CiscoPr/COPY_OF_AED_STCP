@@ -6,6 +6,7 @@
 #include <vector>
 #include <map>
 #include <queue>
+#include <stack>
 
 class lesschanges_graph {
     struct Edge{
@@ -31,7 +32,7 @@ class lesschanges_graph {
 public:
 
     lesschanges_graph(int stops, bool dir = true);
-    std::queue<int> bfs(int start, int end);
+    void bfs(int start, int end);
     void stops();
     void edges();
     void addEdge(int src, int dest, double distance);
@@ -39,6 +40,7 @@ public:
    // std::list<int> dijkstra_path(int origin, int destination);
     //void dijkstra(int s);
     double haversine(double lat1, double lon1, double lat2, double lon2);
+    std::stack<int> print_path(int s, int d);
 };
 
 #endif
