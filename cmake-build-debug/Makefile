@@ -224,30 +224,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\STCP_AED_project.dir\build.make CMakeFiles/STCP_AED_project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-menu_trip.obj: menu_trip.cpp.obj
-.PHONY : menu_trip.obj
-
-# target to build an object file
-menu_trip.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STCP_AED_project.dir\build.make CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj
-.PHONY : menu_trip.cpp.obj
-
-menu_trip.i: menu_trip.cpp.i
-.PHONY : menu_trip.i
-
-# target to preprocess a source file
-menu_trip.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STCP_AED_project.dir\build.make CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.i
-.PHONY : menu_trip.cpp.i
-
-menu_trip.s: menu_trip.cpp.s
-.PHONY : menu_trip.s
-
-# target to generate assembly for a file
-menu_trip.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STCP_AED_project.dir\build.make CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.s
-.PHONY : menu_trip.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -269,9 +245,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... menu_trip.obj
-	@echo ... menu_trip.i
-	@echo ... menu_trip.s
 .PHONY : help
 
 

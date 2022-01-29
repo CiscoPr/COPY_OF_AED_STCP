@@ -82,24 +82,10 @@ CMakeFiles/STCP_AED_project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STCP_AED_project.dir/main.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Francisco Prada\COPY_OF_AED_STCP\main.cpp" -o CMakeFiles\STCP_AED_project.dir\main.cpp.s
 
-CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj: CMakeFiles/STCP_AED_project.dir/flags.make
-CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj: ../menu_trip.cpp
-CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj: CMakeFiles/STCP_AED_project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj -MF CMakeFiles\STCP_AED_project.dir\menu_trip.cpp.obj.d -o CMakeFiles\STCP_AED_project.dir\menu_trip.cpp.obj -c "C:\Users\Francisco Prada\COPY_OF_AED_STCP\menu_trip.cpp"
-
-CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Francisco Prada\COPY_OF_AED_STCP\menu_trip.cpp" > CMakeFiles\STCP_AED_project.dir\menu_trip.cpp.i
-
-CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Francisco Prada\COPY_OF_AED_STCP\menu_trip.cpp" -o CMakeFiles\STCP_AED_project.dir\menu_trip.cpp.s
-
 CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj: CMakeFiles/STCP_AED_project.dir/flags.make
 CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj: ../filereader.cpp
 CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj: CMakeFiles/STCP_AED_project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj -MF CMakeFiles\STCP_AED_project.dir\filereader.cpp.obj.d -o CMakeFiles\STCP_AED_project.dir\filereader.cpp.obj -c "C:\Users\Francisco Prada\COPY_OF_AED_STCP\filereader.cpp"
 
 CMakeFiles/STCP_AED_project.dir/filereader.cpp.i: cmake_force
@@ -113,7 +99,7 @@ CMakeFiles/STCP_AED_project.dir/filereader.cpp.s: cmake_force
 CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj: CMakeFiles/STCP_AED_project.dir/flags.make
 CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj: ../distance_graph.cpp
 CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj: CMakeFiles/STCP_AED_project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj -MF CMakeFiles\STCP_AED_project.dir\distance_graph.cpp.obj.d -o CMakeFiles\STCP_AED_project.dir\distance_graph.cpp.obj -c "C:\Users\Francisco Prada\COPY_OF_AED_STCP\distance_graph.cpp"
 
 CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.i: cmake_force
@@ -127,7 +113,7 @@ CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.s: cmake_force
 CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj: CMakeFiles/STCP_AED_project.dir/flags.make
 CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj: ../lesschanges_graph.cpp
 CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj: CMakeFiles/STCP_AED_project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj -MF CMakeFiles\STCP_AED_project.dir\lesschanges_graph.cpp.obj.d -o CMakeFiles\STCP_AED_project.dir\lesschanges_graph.cpp.obj -c "C:\Users\Francisco Prada\COPY_OF_AED_STCP\lesschanges_graph.cpp"
 
 CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.i: cmake_force
@@ -141,7 +127,6 @@ CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.s: cmake_force
 # Object files for target STCP_AED_project
 STCP_AED_project_OBJECTS = \
 "CMakeFiles/STCP_AED_project.dir/main.cpp.obj" \
-"CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj" \
 "CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj" \
 "CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj" \
 "CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj"
@@ -150,7 +135,6 @@ STCP_AED_project_OBJECTS = \
 STCP_AED_project_EXTERNAL_OBJECTS =
 
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/main.cpp.obj
-STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/filereader.cpp.obj
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/distance_graph.cpp.obj
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj
@@ -158,7 +142,7 @@ STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/build.make
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/linklibs.rsp
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/objects1.rsp
 STCP_AED_project.exe: CMakeFiles/STCP_AED_project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable STCP_AED_project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Francisco Prada\COPY_OF_AED_STCP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable STCP_AED_project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\STCP_AED_project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

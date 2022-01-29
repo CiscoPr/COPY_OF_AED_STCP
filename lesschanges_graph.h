@@ -30,11 +30,33 @@ class lesschanges_graph {
     std::vector<Node> nodes;    /**<The list of nodes/stops being represented*/
     std::map<std::string, int> map_stops;
 public:
-
+    /**
+     * constructor of the unweighted graph
+     * @param stops
+     * @param dir
+     */
     lesschanges_graph(int stops, bool dir = true);
+    /**
+     * here we use the BFS algortihm for searching
+     * in this graph
+     * @param start
+     * @param end
+     */
     void bfs(int start, int end);
+    /**
+     * it reads the stops.csv file and associates each
+     * part to variable
+     */
     void stops();
+    /**
+      * it will define the edges of the graph
+      */
     void edges();
+    /**
+     * that adds unweighted edges to the graph
+     * @param src
+     * @param dest
+     */
     void addEdge(int src, int dest);
     //int dijkstra_distance(int origin, int destination);
    // std::list<int> dijkstra_path(int origin, int destination);
@@ -53,6 +75,14 @@ public:
      * @return
      */
     double haversine(double lat1, double lon1, double lat2, double lon2);
+    /**
+     * this function will create a stack
+     * with the shortest path from one node
+     * to another one
+     * @param s
+     * @param d
+     * @return st
+     */
     std::stack<int> shortest_path(int s, int d);
     /**
      * given some coordinates by user input

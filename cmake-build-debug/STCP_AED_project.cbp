@@ -101,12 +101,6 @@
 		<Unit filename="C:/Users/Francisco Prada/COPY_OF_AED_STCP/main.cpp">
 			<Option target="STCP_AED_project"/>
 		</Unit>
-		<Unit filename="C:/Users/Francisco Prada/COPY_OF_AED_STCP/menu_trip.cpp">
-			<Option target="STCP_AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Francisco Prada/COPY_OF_AED_STCP/menu_trip.h">
-			<Option target="STCP_AED_project"/>
-		</Unit>
 		<Unit filename="C:/Users/Francisco Prada/COPY_OF_AED_STCP/minHeap.h">
 			<Option target="STCP_AED_project"/>
 		</Unit>

@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/STCP_AED_project.dir/lesschanges_graph.cpp.obj.d"
   "CMakeFiles/STCP_AED_project.dir/main.cpp.obj"
   "CMakeFiles/STCP_AED_project.dir/main.cpp.obj.d"
-  "CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj"
-  "CMakeFiles/STCP_AED_project.dir/menu_trip.cpp.obj.d"
   "STCP_AED_project.exe"
   "STCP_AED_project.exe.manifest"
   "STCP_AED_project.pdb"

@@ -36,6 +36,13 @@ std\+::string \mbox{\hyperlink{classlesschanges__graph_a1d08563cd2f109516669eb45
 \doxysubsubsection{\texorpdfstring{lesschanges\_graph()}{lesschanges\_graph()}}
 {\footnotesize\ttfamily lesschanges\+\_\+graph\+::lesschanges\+\_\+graph (\begin{DoxyParamCaption}\item[{int}]{stops,  }\item[{bool}]{dir = {\ttfamily true} }\end{DoxyParamCaption})}
 
+constructor of the unweighted graph 
+\begin{DoxyParams}{Parameters}
+{\em stops} & \\
+\hline
+{\em dir} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -45,12 +52,26 @@ std\+::string \mbox{\hyperlink{classlesschanges__graph_a1d08563cd2f109516669eb45
 \doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest }\end{DoxyParamCaption})}
 
+that adds unweighted edges to the graph 
+\begin{DoxyParams}{Parameters}
+{\em src} & \\
+\hline
+{\em dest} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classlesschanges__graph_af4a98b0c707edf8c323cc9d144438fd1}\label{classlesschanges__graph_af4a98b0c707edf8c323cc9d144438fd1}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!bfs@{bfs}}
 \index{bfs@{bfs}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::bfs (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
 
+here we use the BFS algortihm for searching in this graph 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}\label{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!closeststop@{closeststop}}
 \index{closeststop@{closeststop}!lesschanges\_graph@{lesschanges\_graph}}
@@ -73,7 +94,7 @@ index
 \doxysubsubsection{\texorpdfstring{edges()}{edges()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}\label{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}} 
+it will define the edges of the graph \mbox{\Hypertarget{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}\label{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!get\_index@{get\_index}}
 \index{get\_index@{get\_index}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{get\_index()}{get\_index()}}
@@ -127,13 +148,23 @@ name
 \doxysubsubsection{\texorpdfstring{shortest\_path()}{shortest\_path()}}
 {\footnotesize\ttfamily stack$<$ int $>$ lesschanges\+\_\+graph\+::shortest\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{d }\end{DoxyParamCaption})}
 
+this function will create a stack with the shortest path from one node to another one 
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+{\em d} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+st 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}\label{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!stops@{stops}}
 \index{stops@{stops}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{stops()}{stops()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+it reads the stops.\+csv file and associates each part to variable 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
