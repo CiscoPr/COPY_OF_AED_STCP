@@ -1,6 +1,5 @@
 #ifndef STCP_AED_PROJECT_LESSCHANGES_GRAPH_H
 #define STCP_AED_PROJECT_LESSCHANGES_GRAPH_H
-
 #include <list>
 #include <iostream>
 #include <vector>
