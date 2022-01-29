@@ -35,12 +35,46 @@ public:
     void bfs(int start, int end);
     void stops();
     void edges();
-    void addEdge(int src, int dest, double distance);
+    void addEdge(int src, int dest);
     //int dijkstra_distance(int origin, int destination);
    // std::list<int> dijkstra_path(int origin, int destination);
-    //void dijkstra(int s);
+    //void dijkstra(int s)
+    // ;
+    /**
+     * in this case, it will only be used
+     * for us to get the closest stop to the
+     * user's coordinates
+     * it is useless for the rest of the graph,
+     * since it's unweighted
+     * @param lat1
+     * @param lon1
+     * @param lat2
+     * @param lon2
+     * @return
+     */
     double haversine(double lat1, double lon1, double lat2, double lon2);
-    std::stack<int> print_path(int s, int d);
+    std::stack<int> shortest_path(int s, int d);
+    /**
+     * given some coordinates by user input
+     * this will get the closest stop
+     * @param latitude
+     * @param longitude
+     * @return index
+     */
+    int closeststop(double latitude, double longitude);
+    /**
+     * this will get the index of a
+     * given stop code
+     * @param stop
+     * @return
+     */
+    int get_index(std::string stop);
+    /**
+     * gets the name of the stop
+     * @param a
+     * @return name
+     */
+    std::string mappers(int a);
 };
 
 #endif

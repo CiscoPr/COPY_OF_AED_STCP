@@ -1,4 +1,5 @@
 \hypertarget{lesschanges__graph_8h_source}{}\doxysection{lesschanges\+\_\+graph.\+h}
+\label{lesschanges__graph_8h_source}\index{C:/Users/Francisco Prada/COPY\_OF\_AED\_STCP/lesschanges\_graph.h@{C:/Users/Francisco Prada/COPY\_OF\_AED\_STCP/lesschanges\_graph.h}}
 \mbox{\hyperlink{lesschanges__graph_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef STCP\_AED\_PROJECT\_LESSCHANGES\_GRAPH\_H}}
@@ -38,14 +39,18 @@
 \DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlesschanges__graph_af4a98b0c707edf8c323cc9d144438fd1}{bfs}}(\textcolor{keywordtype}{int} start, \textcolor{keywordtype}{int} end);}
 \DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}{stops}}();}
 \DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlesschanges__graph_a97ad00d46d2204f433d5425f22c769f6}{edges}}();}
-\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlesschanges__graph_a31a0bf8f15b583aca3ecb051c58f3332}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest, \textcolor{keywordtype}{double} distance);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classlesschanges__graph_a0841a6c0f941dfb70629b5199990d821}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest);}
 \DoxyCodeLine{39     \textcolor{comment}{//int dijkstra\_distance(int origin, int destination);}}
 \DoxyCodeLine{40    \textcolor{comment}{// std::list<int> dijkstra\_path(int origin, int destination);}}
-\DoxyCodeLine{41     \textcolor{comment}{//void dijkstra(int s);}}
-\DoxyCodeLine{42     \textcolor{keywordtype}{double} \mbox{\hyperlink{classlesschanges__graph_afa54cd34f8affa83a5c50a7b8d13dac4}{haversine}}(\textcolor{keywordtype}{double} lat1, \textcolor{keywordtype}{double} lon1, \textcolor{keywordtype}{double} lat2, \textcolor{keywordtype}{double} lon2);}
-\DoxyCodeLine{43     std::stack<int> \mbox{\hyperlink{classlesschanges__graph_a1b2627bd63e2e90ec9724f6cb4cad6dc}{print\_path}}(\textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} d);}
-\DoxyCodeLine{44 \};}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{41     \textcolor{comment}{//void dijkstra(int s)}}
+\DoxyCodeLine{42     \textcolor{comment}{// ;}}
+\DoxyCodeLine{55 \textcolor{comment}{}    \textcolor{keywordtype}{double} \mbox{\hyperlink{classlesschanges__graph_afa54cd34f8affa83a5c50a7b8d13dac4}{haversine}}(\textcolor{keywordtype}{double} lat1, \textcolor{keywordtype}{double} lon1, \textcolor{keywordtype}{double} lat2, \textcolor{keywordtype}{double} lon2);}
+\DoxyCodeLine{56     std::stack<int> \mbox{\hyperlink{classlesschanges__graph_afb0fbfd2124808465e90989bc5141b11}{shortest\_path}}(\textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} d);}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}{closeststop}}(\textcolor{keywordtype}{double} latitude, \textcolor{keywordtype}{double} longitude);}
+\DoxyCodeLine{71     \textcolor{keywordtype}{int} \mbox{\hyperlink{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}{get\_index}}(std::string stop);}
+\DoxyCodeLine{77     std::string \mbox{\hyperlink{classlesschanges__graph_a1d08563cd2f109516669eb456eb6522f}{mappers}}(\textcolor{keywordtype}{int} a);}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

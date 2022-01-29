@@ -157,10 +157,10 @@ int distance_graph::get_index(std::string stop){
 int distance_graph::closeststop(double latitude, double longitude){
     int index;
     double distance;
-    double min_dist;
+    double min_dist = INF;
     for (int i=1; i<nodes.size();i++){
         distance=haversine(latitude,longitude,nodes[i].latitude,nodes[i].longitude);
-        if(min_dist<distance){
+        if(distance<min_dist){
             min_dist=distance;
             index=i;
         }

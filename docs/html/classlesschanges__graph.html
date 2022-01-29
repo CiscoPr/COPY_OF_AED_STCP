@@ -84,12 +84,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a051ebf772d0d655b26033cc1dfc09f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97ad00d46d2204f433d5425f22c769f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a97ad00d46d2204f433d5425f22c769f6">edges</a> ()</td></tr>
 <tr class="separator:a97ad00d46d2204f433d5425f22c769f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31a0bf8f15b583aca3ecb051c58f3332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a31a0bf8f15b583aca3ecb051c58f3332">addEdge</a> (int src, int dest, double distance)</td></tr>
-<tr class="separator:a31a0bf8f15b583aca3ecb051c58f3332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0841a6c0f941dfb70629b5199990d821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a0841a6c0f941dfb70629b5199990d821">addEdge</a> (int src, int dest)</td></tr>
+<tr class="separator:a0841a6c0f941dfb70629b5199990d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa54cd34f8affa83a5c50a7b8d13dac4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#afa54cd34f8affa83a5c50a7b8d13dac4">haversine</a> (double lat1, double lon1, double lat2, double lon2)</td></tr>
 <tr class="separator:afa54cd34f8affa83a5c50a7b8d13dac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2627bd63e2e90ec9724f6cb4cad6dc"><td class="memItemLeft" align="right" valign="top">std::stack&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a1b2627bd63e2e90ec9724f6cb4cad6dc">print_path</a> (int s, int d)</td></tr>
-<tr class="separator:a1b2627bd63e2e90ec9724f6cb4cad6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0fbfd2124808465e90989bc5141b11"><td class="memItemLeft" align="right" valign="top">std::stack&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#afb0fbfd2124808465e90989bc5141b11">shortest_path</a> (int s, int d)</td></tr>
+<tr class="separator:afb0fbfd2124808465e90989bc5141b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f37f36e502d07347b8e173cf06cd9b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a0f37f36e502d07347b8e173cf06cd9b8">closeststop</a> (double latitude, double longitude)</td></tr>
+<tr class="separator:a0f37f36e502d07347b8e173cf06cd9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6599e19defd6b1609e0763501a2f5da5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a6599e19defd6b1609e0763501a2f5da5">get_index</a> (std::string stop)</td></tr>
+<tr class="separator:a6599e19defd6b1609e0763501a2f5da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d08563cd2f109516669eb456eb6522f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlesschanges__graph.html#a1d08563cd2f109516669eb456eb6522f">mappers</a> (int a)</td></tr>
+<tr class="separator:a1d08563cd2f109516669eb456eb6522f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5493f1b88d81028fe36b5f6882c1b35f" name="a5493f1b88d81028fe36b5f6882c1b35f"></a>
@@ -121,8 +127,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a31a0bf8f15b583aca3ecb051c58f3332" name="a31a0bf8f15b583aca3ecb051c58f3332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31a0bf8f15b583aca3ecb051c58f3332">&#9670;&nbsp;</a></span>addEdge()</h2>
+<a id="a0841a6c0f941dfb70629b5199990d821" name="a0841a6c0f941dfb70629b5199990d821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0841a6c0f941dfb70629b5199990d821">&#9670;&nbsp;</a></span>addEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,13 +143,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>distance</em>&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -183,6 +183,42 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f37f36e502d07347b8e173cf06cd9b8" name="a0f37f36e502d07347b8e173cf06cd9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f37f36e502d07347b8e173cf06cd9b8">&#9670;&nbsp;</a></span>closeststop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lesschanges_graph::closeststop </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >given some coordinates by user input this will get the closest stop </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude</td><td></td></tr>
+    <tr><td class="paramname">longitude</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>index </dd></dl>
+
+</div>
+</div>
 <a id="a97ad00d46d2204f433d5425f22c769f6" name="a97ad00d46d2204f433d5425f22c769f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97ad00d46d2204f433d5425f22c769f6">&#9670;&nbsp;</a></span>edges()</h2>
 
@@ -197,6 +233,31 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6599e19defd6b1609e0763501a2f5da5" name="a6599e19defd6b1609e0763501a2f5da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6599e19defd6b1609e0763501a2f5da5">&#9670;&nbsp;</a></span>get_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lesschanges_graph::get_index </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>stop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >this will get the index of a given stop code </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stop</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -237,17 +298,52 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >in this case, it will only be used for us to get the closest stop to the user's coordinates it is useless for the rest of the graph, since it's unweighted </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lat1</td><td></td></tr>
+    <tr><td class="paramname">lon1</td><td></td></tr>
+    <tr><td class="paramname">lat2</td><td></td></tr>
+    <tr><td class="paramname">lon2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<a id="a1b2627bd63e2e90ec9724f6cb4cad6dc" name="a1b2627bd63e2e90ec9724f6cb4cad6dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2627bd63e2e90ec9724f6cb4cad6dc">&#9670;&nbsp;</a></span>print_path()</h2>
+<a id="a1d08563cd2f109516669eb456eb6522f" name="a1d08563cd2f109516669eb456eb6522f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d08563cd2f109516669eb456eb6522f">&#9670;&nbsp;</a></span>mappers()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">stack&lt; int &gt; lesschanges_graph::print_path </td>
+          <td class="memname">std::string lesschanges_graph::mappers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >gets the name of the stop </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>name </dd></dl>
+
+</div>
+</div>
+<a id="afb0fbfd2124808465e90989bc5141b11" name="afb0fbfd2124808465e90989bc5141b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0fbfd2124808465e90989bc5141b11">&#9670;&nbsp;</a></span>shortest_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stack&lt; int &gt; lesschanges_graph::shortest_path </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -286,8 +382,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="lesschanges__graph_8h_source.html">lesschanges_graph.h</a></li>
-<li><a class="el" href="lesschanges__graph_8cpp.html">lesschanges_graph.cpp</a></li>
+<li>C:/Users/Francisco Prada/COPY_OF_AED_STCP/<a class="el" href="lesschanges__graph_8h_source.html">lesschanges_graph.h</a></li>
+<li>C:/Users/Francisco Prada/COPY_OF_AED_STCP/<a class="el" href="lesschanges__graph_8cpp.html">lesschanges_graph.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

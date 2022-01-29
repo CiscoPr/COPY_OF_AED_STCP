@@ -136,6 +136,8 @@ CMakeFiles/STCP_AED_project.dir/main.cpp.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/fstream.tcc \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
  C:\Users\Francisco\ Prada\COPY_OF_AED_STCP\filereader.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -158,4 +160,16 @@ CMakeFiles/STCP_AED_project.dir/main.cpp.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
- C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+ C:\Users\Francisco\ Prada\COPY_OF_AED_STCP\lesschanges_graph.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/queue \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/deque \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_deque.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/deque.tcc \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_queue.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stack \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_stack.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/climits \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/math.h

@@ -15,11 +15,17 @@ void \mbox{\hyperlink{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}
 \item 
 void \mbox{\hyperlink{classlesschanges__graph_a97ad00d46d2204f433d5425f22c769f6}{edges}} ()
 \item 
-void \mbox{\hyperlink{classlesschanges__graph_a31a0bf8f15b583aca3ecb051c58f3332}{add\+Edge}} (int src, int dest, double distance)
+void \mbox{\hyperlink{classlesschanges__graph_a0841a6c0f941dfb70629b5199990d821}{add\+Edge}} (int src, int dest)
 \item 
 double \mbox{\hyperlink{classlesschanges__graph_afa54cd34f8affa83a5c50a7b8d13dac4}{haversine}} (double lat1, double lon1, double lat2, double lon2)
 \item 
-std\+::stack$<$ int $>$ \mbox{\hyperlink{classlesschanges__graph_a1b2627bd63e2e90ec9724f6cb4cad6dc}{print\+\_\+path}} (int s, int d)
+std\+::stack$<$ int $>$ \mbox{\hyperlink{classlesschanges__graph_afb0fbfd2124808465e90989bc5141b11}{shortest\+\_\+path}} (int s, int d)
+\item 
+int \mbox{\hyperlink{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}{closeststop}} (double latitude, double longitude)
+\item 
+int \mbox{\hyperlink{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}{get\+\_\+index}} (std\+::string stop)
+\item 
+std\+::string \mbox{\hyperlink{classlesschanges__graph_a1d08563cd2f109516669eb456eb6522f}{mappers}} (int a)
 \end{DoxyCompactItemize}
 
 
@@ -33,11 +39,11 @@ std\+::stack$<$ int $>$ \mbox{\hyperlink{classlesschanges__graph_a1b2627bd63e2e9
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classlesschanges__graph_a31a0bf8f15b583aca3ecb051c58f3332}\label{classlesschanges__graph_a31a0bf8f15b583aca3ecb051c58f3332}} 
+\mbox{\Hypertarget{classlesschanges__graph_a0841a6c0f941dfb70629b5199990d821}\label{classlesschanges__graph_a0841a6c0f941dfb70629b5199990d821}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!addEdge@{addEdge}}
 \index{addEdge@{addEdge}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
-{\footnotesize\ttfamily void lesschanges\+\_\+graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest,  }\item[{double}]{distance }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void lesschanges\+\_\+graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classlesschanges__graph_af4a98b0c707edf8c323cc9d144438fd1}\label{classlesschanges__graph_af4a98b0c707edf8c323cc9d144438fd1}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!bfs@{bfs}}
@@ -45,23 +51,81 @@ std\+::stack$<$ int $>$ \mbox{\hyperlink{classlesschanges__graph_a1b2627bd63e2e9
 \doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::bfs (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}\label{classlesschanges__graph_a0f37f36e502d07347b8e173cf06cd9b8}} 
+\index{lesschanges\_graph@{lesschanges\_graph}!closeststop@{closeststop}}
+\index{closeststop@{closeststop}!lesschanges\_graph@{lesschanges\_graph}}
+\doxysubsubsection{\texorpdfstring{closeststop()}{closeststop()}}
+{\footnotesize\ttfamily int lesschanges\+\_\+graph\+::closeststop (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+given some coordinates by user input this will get the closest stop 
+\begin{DoxyParams}{Parameters}
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlesschanges__graph_a97ad00d46d2204f433d5425f22c769f6}\label{classlesschanges__graph_a97ad00d46d2204f433d5425f22c769f6}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!edges@{edges}}
 \index{edges@{edges}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{edges()}{edges()}}
 {\footnotesize\ttfamily void lesschanges\+\_\+graph\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}\label{classlesschanges__graph_a6599e19defd6b1609e0763501a2f5da5}} 
+\index{lesschanges\_graph@{lesschanges\_graph}!get\_index@{get\_index}}
+\index{get\_index@{get\_index}!lesschanges\_graph@{lesschanges\_graph}}
+\doxysubsubsection{\texorpdfstring{get\_index()}{get\_index()}}
+{\footnotesize\ttfamily int lesschanges\+\_\+graph\+::get\+\_\+index (\begin{DoxyParamCaption}\item[{std\+::string}]{stop }\end{DoxyParamCaption})}
+
+this will get the index of a given stop code 
+\begin{DoxyParams}{Parameters}
+{\em stop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlesschanges__graph_afa54cd34f8affa83a5c50a7b8d13dac4}\label{classlesschanges__graph_afa54cd34f8affa83a5c50a7b8d13dac4}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!haversine@{haversine}}
 \index{haversine@{haversine}!lesschanges\_graph@{lesschanges\_graph}}
 \doxysubsubsection{\texorpdfstring{haversine()}{haversine()}}
 {\footnotesize\ttfamily double lesschanges\+\_\+graph\+::haversine (\begin{DoxyParamCaption}\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2 }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classlesschanges__graph_a1b2627bd63e2e90ec9724f6cb4cad6dc}\label{classlesschanges__graph_a1b2627bd63e2e90ec9724f6cb4cad6dc}} 
-\index{lesschanges\_graph@{lesschanges\_graph}!print\_path@{print\_path}}
-\index{print\_path@{print\_path}!lesschanges\_graph@{lesschanges\_graph}}
-\doxysubsubsection{\texorpdfstring{print\_path()}{print\_path()}}
-{\footnotesize\ttfamily stack$<$ int $>$ lesschanges\+\_\+graph\+::print\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{d }\end{DoxyParamCaption})}
+in this case, it will only be used for us to get the closest stop to the user\textquotesingle{}s coordinates it is useless for the rest of the graph, since it\textquotesingle{}s unweighted 
+\begin{DoxyParams}{Parameters}
+{\em lat1} & \\
+\hline
+{\em lon1} & \\
+\hline
+{\em lat2} & \\
+\hline
+{\em lon2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlesschanges__graph_a1d08563cd2f109516669eb456eb6522f}\label{classlesschanges__graph_a1d08563cd2f109516669eb456eb6522f}} 
+\index{lesschanges\_graph@{lesschanges\_graph}!mappers@{mappers}}
+\index{mappers@{mappers}!lesschanges\_graph@{lesschanges\_graph}}
+\doxysubsubsection{\texorpdfstring{mappers()}{mappers()}}
+{\footnotesize\ttfamily std\+::string lesschanges\+\_\+graph\+::mappers (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+gets the name of the stop 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlesschanges__graph_afb0fbfd2124808465e90989bc5141b11}\label{classlesschanges__graph_afb0fbfd2124808465e90989bc5141b11}} 
+\index{lesschanges\_graph@{lesschanges\_graph}!shortest\_path@{shortest\_path}}
+\index{shortest\_path@{shortest\_path}!lesschanges\_graph@{lesschanges\_graph}}
+\doxysubsubsection{\texorpdfstring{shortest\_path()}{shortest\_path()}}
+{\footnotesize\ttfamily stack$<$ int $>$ lesschanges\+\_\+graph\+::shortest\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{d }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}\label{classlesschanges__graph_a051ebf772d0d655b26033cc1dfc09f05}} 
 \index{lesschanges\_graph@{lesschanges\_graph}!stops@{stops}}
@@ -73,5 +137,5 @@ std\+::stack$<$ int $>$ \mbox{\hyperlink{classlesschanges__graph_a1b2627bd63e2e9
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{lesschanges__graph_8h}{lesschanges\+\_\+graph.\+h}}\item 
-\mbox{\hyperlink{lesschanges__graph_8cpp}{lesschanges\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Francisco Prada/\+COPY\+\_\+\+OF\+\_\+\+AED\+\_\+\+STCP/\mbox{\hyperlink{lesschanges__graph_8h}{lesschanges\+\_\+graph.\+h}}\item 
+C\+:/\+Users/\+Francisco Prada/\+COPY\+\_\+\+OF\+\_\+\+AED\+\_\+\+STCP/\mbox{\hyperlink{lesschanges__graph_8cpp}{lesschanges\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}

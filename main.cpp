@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fstream>
+#include <sstream>
 #include "filereader.h"
 #include "distance_graph.h"
-
+#include "lesschanges_graph.h"
+#include <climits>
+#include <cmath>
 
 //! this will be the function with the menu_trip
 int main() {
@@ -33,9 +36,8 @@ int main() {
                  "                                                                                                   \n"
                  "                           1-get the shortest path                                                 \n"
                  "                           2-get the trip with less bus changes                                    \n"
-                 "                           3-get the cheapest trip                                                 \n"
-                 "                           4-get the minimum distance between two places                           \n"
-                 "                           5-exit                                                                  "<< std::endl;
+                 "                           3-get the distance between me and a certain stop                        \n"
+                 "                           4-exit                                                                  "<< std::endl;
     std::cout << std::string(4, '\n');
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
@@ -49,10 +51,10 @@ int main() {
         std::cout << "                       Where are you at the moment? Put                                        \n"
                      "                       latitude in here! ";
         std::cin >> latitude;
-        std::cout << '\n',
+        std::cout << '\n';
         std::cout << "                       And put longitude in here! ";
         std::cin  >> longitude;
-
+        std::cout << '\n';
         std::cout << "                       To what stop do you wish to go? Put                                     \n"
                      "                       its code in here! ";
         std::cin >> destination;
@@ -69,61 +71,100 @@ int main() {
         }
     }
     if(option == 2){
-        double latitude, longitude;
-        std::string destination;
+        std::stack<int> path2;
+        std::list<int>::iterator it1;
+        int index1, destination_index1;
+        double latitude1, longitude1;
+        std::string destination1, stop;
         std::cout << '\n';
         std::cout << "                       Where are you at the moment? Put                                        \n"
                      "                       latitude in here! ";
-        std::cin >> latitude;
-        std::cout << '\n',
-                std::cout << "                       And put longitude in here! ";
-        std::cin  >> longitude;
+        std::cin >> latitude1;
+        std::cout << '\n';
+        std::cout << "                       And put longitude in here! ";
+        std::cin  >> longitude1;
+        std::cout << '\n';
         std::cout << "                       To what stop do you wish to go? Put                                     \n"
                      "                       its code in here! ";
-        std::cin >> destination;
+        std::cin >> destination1;
         std::cout << '\n';
+        lesschanges_graph graph1 = lesschanges_graph(f1.number_of_stops(), true);
+        graph1.stops();
+        graph1.edges();
+        index1 = graph1.closeststop(latitude1, longitude1);
+        destination_index1 = graph1.get_index(destination1);
+        path2 = graph1.shortest_path(index1, destination_index1);
+        while(!path2.empty()){
+            int stop1 = path2.top();
+            std::cout << graph1.mappers(stop1) << '\n';
+            path2.pop();
+        }
         //f1.readstops();
-        //main();
+
     }
+
     if(option == 3){
-        double latitude, longitude;
-        std::string destination;
+        int index2, destination_index2, pos = 0;
+        double latitude2, longitude2, latitude_of_d, longitude_of_d;
+        std::string destination2, first_line, line2;
         std::cout << '\n';
         std::cout << "                       Where are you at the moment? Put                                        \n"
                      "                       latitude in here! ";
-        std::cin >> latitude;
-        std::cout << '\n',
-                std::cout << "                       And put longitude in here! ";
-        std::cin  >> longitude;
-        std::cout << "                       To what stop do you wish to go? Put                                     \n"
-                     "                       its code in here! ";
-        std::cin >> destination;
+        std::cin >> latitude2;
         std::cout << '\n';
+        std::cout << "                       And put longitude in here! ";
+        std::cin  >> longitude2;
+        std::cout << '\n';
+        std::cout << "                       Please put the code of the stop                                         \n"
+                     "                       here: ";
+        std::cin >> destination2;
+        std::cout << '\n';
+        std::string stops_file = "../dataset/stops.csv";
+        std::ifstream most_useful_feature_ever{stops_file};
+        while(std::getline(most_useful_feature_ever, line2))
+        {
+            std::stringstream ss(line2);
+            std::string code;
+            std::getline(ss, code, ',');
+            std::string name;
+            std::getline(ss, name, ',');
+            std::string zone;
+            std::getline(ss, zone, ',');
+            std::string latitude4;
+            std::getline(ss, latitude4, ',');
+            std::string longitude4;
+            std::getline(ss, longitude4);
+            ss >> code >> name >> zone >> latitude4 >> longitude4;
+            if(destination2 == code) {
+                latitude_of_d = std::stod(latitude4);
+                longitude_of_d = std::stod(longitude4);
+                break;
+            }
+
+        }
+        most_useful_feature_ever.close();
+        //std::cout << latitude_of_d << "\n";
+        //std::cout << longitude_of_d << "\n";
+        //now we shall apply the haversine formula
+        // distance between latitudes
+        // and longitudes
+        double dLat = (latitude_of_d - latitude2) * M_PI / 180.0;
+        double dLon = (longitude_of_d - longitude2) * M_PI / 180.0;
+
+        // convert to radians
+        latitude2 = (latitude2) * M_PI / 180.0;
+        latitude_of_d = (latitude_of_d) * M_PI / 180.0;
+
+        // apply formulae
+        double a = pow(sin(dLat / 2), 2) + pow(sin(dLon / 2), 2) * cos(latitude2) * cos(latitude_of_d);
+        double rad = 6371;
+        double c = 2 * asin(sqrt(a));
+        double result = rad * c;
+        std::cout << "                       You're currently " << result << "km away from the stop!";
         //f1.readstops();
-        //main();
+
     }
     if(option == 4){
-        distance_graph dg1(f1.number_of_stops(), true);
-        std::map<std::string ,int> stops_map;
-        std::string filename = "../dataset/stops.csv";
-        std::ifstream stops{filename};
-        f1.stops_code(stops, f1.number_of_stops(), stops_map);
-        int integer_origin, integer_destination;
-        std::string origin, destination;
-        std::cout << "                       From which stop do you want to start?                                   \n"
-                     "                       Put its code here: ";
-        std::cin >> origin;
-        std::cout << "                       To what stop do you wish to go? Put                                     \n"
-                     "                       its code in here! ";
-        std::cin >> destination;
-        std::cout << '\n';
-        integer_origin = stops_map[origin];
-        integer_destination = stops_map[destination];
-        dg1.dijkstra_distance(integer_origin, integer_destination);
-        //f1.readstops();
-        //main();
-    }
-    if(option == 5){
         std::cout << std::string(4, '\n');
         std::cout << "                        Are you sure you want to quit? [y/n] ";
         std::cin >> ch;

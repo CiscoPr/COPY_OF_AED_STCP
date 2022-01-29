@@ -10,38 +10,120 @@
 #include <queue>
 #include <vector>
 #include <stack>
+#define INF (INT_MAX/2)
 filereader f3;
 
 lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
 
+void lesschanges_graph::stops() {
+    int n = f3.number_of_stops();
+    std::string filename = "../dataset/stops.csv";
+    std::string first_line;
+    std::ifstream stops;
+    stops.open(filename);
+    if(!stops.is_open()){
+        std::cout << filename << " doesn't exist!";
+    }
+    getline(stops,first_line);
+    for(int i=1;i<=n;i++){
+        map_stops=f3.stops_code(stops,i,map_stops);
+        nodes[i].name=f3.stops_name(stops);
+        nodes[i].zone=f3.stops_zone(stops);
+        nodes[i].latitude=f3.stops_latitude(stops);
+        nodes[i].longitude=f3.stops_longitude(stops);
+    }
+    stops.close();
+}
+
+void lesschanges_graph::addEdge(int src, int dest) {
+    if (src<1 || src>n || dest<1 || dest>n) return;
+    nodes[src].adj.push_back({dest});
+    if (!hasDir) nodes[dest].adj.push_back({src});
+}
+
+void lesschanges_graph::edges() {
+    std::vector<std::string> codes;
+    std::string string_n, line, first_stop, second_stop;
+    double distance;
+    int n, node, node_1, node_2;
+    codes = f3.lines();
+    for (int i = 0; i < codes.size(); i++) {
+        std::string filename = "../dataset/line_" + codes[i] + "_0.csv";
+        std::ifstream edges{filename};
+        getline(edges, string_n);
+        line = f3.stops(edges);
+        n = stoi(string_n);
+        for (int i = 2; i < n + 1; i++) {                                //if something goes wrong, we should check here
+            first_stop = line;
+            second_stop = f3.stops(edges);
+            line = second_stop;
+            node_1 = map_stops[first_stop];
+            node_2 = map_stops[second_stop];
+           // distance = haversine(nodes[node_1].latitude, nodes[node_1].longitude, nodes[node_2].latitude,nodes[node_2].longitude);
+            addEdge(node_1, node_2);
+        }
+        edges.close();
+    }
+
+    for (int i = 0; i < codes.size(); i++) {
+        std::string filename = "../dataset/line_" + codes[i] + "_1.csv";
+        std::ifstream edges{filename};
+        getline(edges, string_n);
+        line = f3.stops(edges);
+        n = stoi(string_n);
+        for (int i = 2;i < n + 1; i++) {                                //if something goes wrong, we should check here
+            first_stop = line;
+            second_stop = f3.stops(edges);
+            line = second_stop;
+            node_1 = map_stops[first_stop];
+            node_2 = map_stops[second_stop];
+            //distance = haversine(nodes[node_1].latitude, nodes[node_1].longitude, nodes[node_2].latitude,nodes[node_2].longitude);
+            addEdge(node_1, node_2);
+        }
+        edges.close();
+    }
+}
+double lesschanges_graph::haversine(double lat1, double lon1, double lat2, double lon2) {
+    // distance between latitudes
+    // and longitudes
+    double dLat = (lat2 - lat1) * M_PI / 180.0;
+    double dLon = (lon2 - lon1) * M_PI / 180.0;
+
+    // convert to radians
+    lat1 = (lat1) * M_PI / 180.0;
+    lat2 = (lat2) * M_PI / 180.0;
+
+    // apply formulae
+    double a = pow(sin(dLat / 2), 2) + pow(sin(dLon / 2), 2) * cos(lat1) * cos(lat2);
+    double rad = 6371;
+    double c = 2 * asin(sqrt(a));
+    return rad * c;
+}
+
+int lesschanges_graph::get_index(std::string stop) {
+    int index;
+    index = map_stops[stop];
+    return index;
+}
+
+
+int lesschanges_graph::closeststop(double latitude, double longitude) {
+    int index;
+    double distance;
+    double min_dist = INF;
+    for (int i=1; i<nodes.size();i++){
+        distance=haversine(latitude,longitude,nodes[i].latitude,nodes[i].longitude);
+        if(distance<min_dist){
+            min_dist=distance;
+            index=i;
+        }
+    }
+    return index;
+}
+
+
 void lesschanges_graph::bfs(int start, int end){
-    /*
-    //vector<std::string> stops_vector;
-    std::queue<int> path;
-    for(int v = 1; v <= n; v++)
-        nodes[v].visited = false;
-    queue<int> q;
-    nodes[start].dist = 0;
-    q.push(start);
-    nodes[start].visited = true;
-    //stops_vector.push_back(nodes[v].name);
-    while(!q.empty()){
-        int u = q.front();
-        q.pop();
-        path = q;
-        int node = q.back();
-        if(node == end)
-            return path;
-        /*
-        cout << u << " at distance of " << nodes[u].dist << endl;
-        for(auto e: nodes[u].adj){
-            int w = e.dest;
-            if(!nodes[w].visited){
-                q.push(w);
-                nodes[w].visited;
-                nodes[w].dist = nodes[u].dist + 1;
-            }
-        */
+
     queue<int> q;
     for(int v = 1; v <= n; v++){
         nodes[v].visited = false;
@@ -63,7 +145,7 @@ void lesschanges_graph::bfs(int start, int end){
     }
 }
 
-stack<int> lesschanges_graph::print_path(int s, int d) {
+stack<int> lesschanges_graph::shortest_path(int s, int d) {
     bfs(s,d);
     stack<int> st;
     while(nodes[d].pred != -1){
@@ -76,7 +158,10 @@ stack<int> lesschanges_graph::print_path(int s, int d) {
 
 
 
-
+std::string lesschanges_graph::mappers(int a) {
+    string name = nodes[a].name;
+    return name;
+}
 
 
 
