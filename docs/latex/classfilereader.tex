@@ -1,0 +1,164 @@
+\hypertarget{classfilereader}{}\doxysection{filereader Class Reference}
+\label{classfilereader}\index{filereader@{filereader}}
+
+
+{\ttfamily \#include $<$filereader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classfilereader_a14b6583ac5d4bb91a431708f54317b5e}{readlinescsv}} (std\+::string filename)
+\item 
+std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{classfilereader_a4792354e2e68e59bee81ed3c1009176f}{stops\+\_\+code}} (std\+::ifstream \&file, int n, std\+::map$<$ std\+::string, int $>$ \&stops\+\_\+map)
+\item 
+std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{classfilereader_aceea019d6c1fe5f62b1cb9cc8e191d51}{readstops}} ()
+\item 
+int \mbox{\hyperlink{classfilereader_aa68e8c047246795e281a8c63f583bf8f}{number\+\_\+of\+\_\+stops}} ()
+\item 
+std\+::string \mbox{\hyperlink{classfilereader_ac4f5f7ab9e60012ae86acb2c24da0e5f}{stops\+\_\+name}} (std\+::ifstream \&file)
+\item 
+std\+::string \mbox{\hyperlink{classfilereader_a9d27a7b5fff94b94204d6a089b43fa6f}{stops\+\_\+zone}} (std\+::ifstream \&file)
+\item 
+double \mbox{\hyperlink{classfilereader_ad619814a4b5661a8698b374e4d03e17d}{stops\+\_\+latitude}} (std\+::ifstream \&file)
+\item 
+double \mbox{\hyperlink{classfilereader_aa594bcd77dc414f09077a173702fb585}{stops\+\_\+longitude}} (std\+::ifstream \&file)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classfilereader_ad5bfb23427e2309414a941e1b3f608f7}{lines}} ()
+\item 
+std\+::string \mbox{\hyperlink{classfilereader_a4cd643880108495839acf7646c710be2}{stops}} (std\+::ifstream \&filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfilereader_ad5bfb23427e2309414a941e1b3f608f7}\label{classfilereader_ad5bfb23427e2309414a941e1b3f608f7}} 
+\index{filereader@{filereader}!lines@{lines}}
+\index{lines@{lines}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{lines()}{lines()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ filereader\+::lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this returns a vector with all the lines in the file \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_aa68e8c047246795e281a8c63f583bf8f}\label{classfilereader_aa68e8c047246795e281a8c63f583bf8f}} 
+\index{filereader@{filereader}!number\_of\_stops@{number\_of\_stops}}
+\index{number\_of\_stops@{number\_of\_stops}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{number\_of\_stops()}{number\_of\_stops()}}
+{\footnotesize\ttfamily int filereader\+::number\+\_\+of\+\_\+stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this function will get the total number of stops \begin{DoxyReturn}{Returns}
+number\+\_\+of\+\_\+stops 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_a14b6583ac5d4bb91a431708f54317b5e}\label{classfilereader_a14b6583ac5d4bb91a431708f54317b5e}} 
+\index{filereader@{filereader}!readlinescsv@{readlinescsv}}
+\index{readlinescsv@{readlinescsv}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{readlinescsv()}{readlinescsv()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ filereader\+::readlinescsv (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+unused 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfilereader_aceea019d6c1fe5f62b1cb9cc8e191d51}\label{classfilereader_aceea019d6c1fe5f62b1cb9cc8e191d51}} 
+\index{filereader@{filereader}!readstops@{readstops}}
+\index{readstops@{readstops}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{readstops()}{readstops()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, int $>$ filereader\+::readstops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+unused \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_a4cd643880108495839acf7646c710be2}\label{classfilereader_a4cd643880108495839acf7646c710be2}} 
+\index{filereader@{filereader}!stops@{stops}}
+\index{stops@{stops}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops()}{stops()}}
+{\footnotesize\ttfamily std\+::string filereader\+::stops (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{filename }\end{DoxyParamCaption})}
+
+this associates each line of the file to a stop 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_a4792354e2e68e59bee81ed3c1009176f}\label{classfilereader_a4792354e2e68e59bee81ed3c1009176f}} 
+\index{filereader@{filereader}!stops\_code@{stops\_code}}
+\index{stops\_code@{stops\_code}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops\_code()}{stops\_code()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, int $>$ filereader\+::stops\+\_\+code (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file,  }\item[{int}]{n,  }\item[{std\+::map$<$ std\+::string, int $>$ \&}]{stops\+\_\+map }\end{DoxyParamCaption})}
+
+this will create the map which associates each stop code with a different integer 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em n} & \\
+\hline
+{\em stops\+\_\+map} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_ad619814a4b5661a8698b374e4d03e17d}\label{classfilereader_ad619814a4b5661a8698b374e4d03e17d}} 
+\index{filereader@{filereader}!stops\_latitude@{stops\_latitude}}
+\index{stops\_latitude@{stops\_latitude}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops\_latitude()}{stops\_latitude()}}
+{\footnotesize\ttfamily double filereader\+::stops\+\_\+latitude (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+this will associate a part of the line to the latitude of the stop 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_aa594bcd77dc414f09077a173702fb585}\label{classfilereader_aa594bcd77dc414f09077a173702fb585}} 
+\index{filereader@{filereader}!stops\_longitude@{stops\_longitude}}
+\index{stops\_longitude@{stops\_longitude}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops\_longitude()}{stops\_longitude()}}
+{\footnotesize\ttfamily double filereader\+::stops\+\_\+longitude (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+this will associate a part of the line to the longitude of the stop 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_ac4f5f7ab9e60012ae86acb2c24da0e5f}\label{classfilereader_ac4f5f7ab9e60012ae86acb2c24da0e5f}} 
+\index{filereader@{filereader}!stops\_name@{stops\_name}}
+\index{stops\_name@{stops\_name}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops\_name()}{stops\_name()}}
+{\footnotesize\ttfamily std\+::string filereader\+::stops\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+this will associate a part of the line to the name of the stop 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfilereader_a9d27a7b5fff94b94204d6a089b43fa6f}\label{classfilereader_a9d27a7b5fff94b94204d6a089b43fa6f}} 
+\index{filereader@{filereader}!stops\_zone@{stops\_zone}}
+\index{stops\_zone@{stops\_zone}!filereader@{filereader}}
+\doxysubsubsection{\texorpdfstring{stops\_zone()}{stops\_zone()}}
+{\footnotesize\ttfamily std\+::string filereader\+::stops\+\_\+zone (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+this will associate a part of the line to the zone of the stop 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{filereader_8h}{filereader.\+h}}\item 
+\mbox{\hyperlink{filereader_8cpp}{filereader.\+cpp}}\end{DoxyCompactItemize}

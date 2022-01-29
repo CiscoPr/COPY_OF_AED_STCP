@@ -1,0 +1,52 @@
+\hypertarget{distance__graph_8h_source}{}\doxysection{distance\+\_\+graph.\+h}
+\mbox{\hyperlink{distance__graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef STCP\_AED\_PROJECT\_DISTANCE\_GRAPH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define STCP\_AED\_PROJECT\_DISTANCE\_GRAPH\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classdistance__graph}{distance\_graph}} \{}
+\DoxyCodeLine{9     \textcolor{keyword}{struct }Edge\{}
+\DoxyCodeLine{10         \textcolor{keywordtype}{int} dest;         }
+\DoxyCodeLine{11       \textcolor{comment}{//  int weight;       /**<Probabbly will be distance*/}}
+\DoxyCodeLine{12         \textcolor{keywordtype}{double} distance;}
+\DoxyCodeLine{13     \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{struct }Node\{}
+\DoxyCodeLine{16         std::list<Edge> adj;}
+\DoxyCodeLine{17         \textcolor{keywordtype}{int} dist;}
+\DoxyCodeLine{18         \textcolor{keywordtype}{int} pred;}
+\DoxyCodeLine{19         std::string name;}
+\DoxyCodeLine{20         std::string zone;}
+\DoxyCodeLine{21         \textcolor{keywordtype}{double} longitude;}
+\DoxyCodeLine{22         \textcolor{keywordtype}{double} latitude;}
+\DoxyCodeLine{23         \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{24     \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} n;        }
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} hasDir;}
+\DoxyCodeLine{28     std::vector<Node> nodes;    }
+\DoxyCodeLine{29     std::map<std::string, int> map\_stops;}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37     \mbox{\hyperlink{classdistance__graph_a75063e63b12842c9b6a89a04335dacb2}{distance\_graph}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}{stops}}, \textcolor{keywordtype}{bool} dir = \textcolor{keyword}{true});}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}{stops}}();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdistance__graph_ad456a0a67c07b3f5f7233ae85c68c094}{edges}}();}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdistance__graph_a35ba51f30bd677f3cc9141687bce36e5}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest, \textcolor{keywordtype}{double} distance);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{classdistance__graph_aa3aad7d322fb6bef2a542dfa18d9ccd2}{dijkstra\_distance}}(\textcolor{keywordtype}{int} origin, \textcolor{keywordtype}{int} destination);}
+\DoxyCodeLine{68     std::list<int> \mbox{\hyperlink{classdistance__graph_a9b73644692c7e75a374ebb20adfb875c}{dijkstra\_path}}(\textcolor{keywordtype}{int} origin, \textcolor{keywordtype}{int} destination);}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{classdistance__graph_ac8bfb82faa796f8f51cb5db588eca3f8}{dijkstra}}(\textcolor{keywordtype}{int} s);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{double} \mbox{\hyperlink{classdistance__graph_a04628945d0b4776d737ec4d36327d7f3}{haversine}}(\textcolor{keywordtype}{double} lat1, \textcolor{keywordtype}{double} lon1, \textcolor{keywordtype}{double} lat2, \textcolor{keywordtype}{double} lon2);}
+\DoxyCodeLine{90     \textcolor{keywordtype}{int} \mbox{\hyperlink{classdistance__graph_a1eec65513d25c772213f6c6731df609c}{closeststop}}(\textcolor{keywordtype}{double} latitude, \textcolor{keywordtype}{double} longitude);}
+\DoxyCodeLine{96     std::string \mbox{\hyperlink{classdistance__graph_ad79b110d2cafb837930eef734b9b3a0d}{get\_name}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{103     \textcolor{keywordtype}{int} \mbox{\hyperlink{classdistance__graph_a696c8d415d41cb4e85ca82da09501f85}{get\_index}}(std::string stop);}
+\DoxyCodeLine{109     std::string \mbox{\hyperlink{classdistance__graph_a0829300da336c38ab097f0a17aec9163}{mappers}}(\textcolor{keywordtype}{int} a);}
+\DoxyCodeLine{110 \};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//STCP\_AED\_PROJECT\_DISTANCE\_GRAPH\_H}}
+
+\end{DoxyCode}

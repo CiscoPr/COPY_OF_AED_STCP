@@ -1,0 +1,28 @@
+\hypertarget{filereader_8h_source}{}\doxysection{filereader.\+h}
+\mbox{\hyperlink{filereader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef STCP\_AED\_PROJECT\_FILEREADER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define STCP\_AED\_PROJECT\_FILEREADER\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{distance__graph_8h}{distance\_graph.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classfilereader}{filereader}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     std::vector<std::string> \mbox{\hyperlink{classfilereader_a14b6583ac5d4bb91a431708f54317b5e}{readlinescsv}}(std::string filename);}
+\DoxyCodeLine{23     std::map<std::string, int> \mbox{\hyperlink{classfilereader_a4792354e2e68e59bee81ed3c1009176f}{stops\_code}}(std::ifstream \&file, \textcolor{keywordtype}{int} n,std::map<std::string, int> \&stops\_map);}
+\DoxyCodeLine{28     std::map<std::string, int> \mbox{\hyperlink{classfilereader_aceea019d6c1fe5f62b1cb9cc8e191d51}{readstops}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{classfilereader_aa68e8c047246795e281a8c63f583bf8f}{number\_of\_stops}}();}
+\DoxyCodeLine{41     std::string \mbox{\hyperlink{classfilereader_ac4f5f7ab9e60012ae86acb2c24da0e5f}{stops\_name}}(std::ifstream \&file);}
+\DoxyCodeLine{48     std::string \mbox{\hyperlink{classfilereader_a9d27a7b5fff94b94204d6a089b43fa6f}{stops\_zone}}(std::ifstream \&file);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{double} \mbox{\hyperlink{classfilereader_ad619814a4b5661a8698b374e4d03e17d}{stops\_latitude}}(std::ifstream \&file);}
+\DoxyCodeLine{62     \textcolor{keywordtype}{double} \mbox{\hyperlink{classfilereader_aa594bcd77dc414f09077a173702fb585}{stops\_longitude}}(std::ifstream \&file);}
+\DoxyCodeLine{68     std::vector<std::string> \mbox{\hyperlink{classfilereader_ad5bfb23427e2309414a941e1b3f608f7}{lines}}();}
+\DoxyCodeLine{75     std::string \mbox{\hyperlink{classfilereader_a4cd643880108495839acf7646c710be2}{stops}}(std::ifstream \&filename);}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//STCP\_AED\_PROJECT\_FILEREADER\_H}}
+
+\end{DoxyCode}

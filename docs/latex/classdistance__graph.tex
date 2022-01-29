@@ -1,0 +1,206 @@
+\hypertarget{classdistance__graph}{}\doxysection{distance\+\_\+graph Class Reference}
+\label{classdistance__graph}\index{distance\_graph@{distance\_graph}}
+
+
+{\ttfamily \#include $<$distance\+\_\+graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdistance__graph_a75063e63b12842c9b6a89a04335dacb2}{distance\+\_\+graph}} (int \mbox{\hyperlink{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}{stops}}, bool dir=true)
+\item 
+void \mbox{\hyperlink{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}{stops}} ()
+\item 
+void \mbox{\hyperlink{classdistance__graph_ad456a0a67c07b3f5f7233ae85c68c094}{edges}} ()
+\item 
+void \mbox{\hyperlink{classdistance__graph_a35ba51f30bd677f3cc9141687bce36e5}{add\+Edge}} (int src, int dest, double distance)
+\item 
+int \mbox{\hyperlink{classdistance__graph_aa3aad7d322fb6bef2a542dfa18d9ccd2}{dijkstra\+\_\+distance}} (int origin, int destination)
+\item 
+std\+::list$<$ int $>$ \mbox{\hyperlink{classdistance__graph_a9b73644692c7e75a374ebb20adfb875c}{dijkstra\+\_\+path}} (int origin, int destination)
+\item 
+void \mbox{\hyperlink{classdistance__graph_ac8bfb82faa796f8f51cb5db588eca3f8}{dijkstra}} (int s)
+\item 
+double \mbox{\hyperlink{classdistance__graph_a04628945d0b4776d737ec4d36327d7f3}{haversine}} (double lat1, double lon1, double lat2, double lon2)
+\item 
+int \mbox{\hyperlink{classdistance__graph_a1eec65513d25c772213f6c6731df609c}{closeststop}} (double latitude, double longitude)
+\item 
+std\+::string \mbox{\hyperlink{classdistance__graph_ad79b110d2cafb837930eef734b9b3a0d}{get\+\_\+name}} (int index)
+\item 
+int \mbox{\hyperlink{classdistance__graph_a696c8d415d41cb4e85ca82da09501f85}{get\+\_\+index}} (std\+::string stop)
+\item 
+std\+::string \mbox{\hyperlink{classdistance__graph_a0829300da336c38ab097f0a17aec9163}{mappers}} (int a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdistance__graph_a75063e63b12842c9b6a89a04335dacb2}\label{classdistance__graph_a75063e63b12842c9b6a89a04335dacb2}} 
+\index{distance\_graph@{distance\_graph}!distance\_graph@{distance\_graph}}
+\index{distance\_graph@{distance\_graph}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{distance\_graph()}{distance\_graph()}}
+{\footnotesize\ttfamily distance\+\_\+graph\+::distance\+\_\+graph (\begin{DoxyParamCaption}\item[{int}]{stops,  }\item[{bool}]{dir = {\ttfamily true} }\end{DoxyParamCaption})}
+
+constructor of this garph class 
+\begin{DoxyParams}{Parameters}
+{\em stops} & \\
+\hline
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdistance__graph_a35ba51f30bd677f3cc9141687bce36e5}\label{classdistance__graph_a35ba51f30bd677f3cc9141687bce36e5}} 
+\index{distance\_graph@{distance\_graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void distance\+\_\+graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest,  }\item[{double}]{distance }\end{DoxyParamCaption})}
+
+this function will add each edge to the graph 
+\begin{DoxyParams}{Parameters}
+{\em src} & \\
+\hline
+{\em dest} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdistance__graph_a1eec65513d25c772213f6c6731df609c}\label{classdistance__graph_a1eec65513d25c772213f6c6731df609c}} 
+\index{distance\_graph@{distance\_graph}!closeststop@{closeststop}}
+\index{closeststop@{closeststop}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{closeststop()}{closeststop()}}
+{\footnotesize\ttfamily int distance\+\_\+graph\+::closeststop (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+given some coordinates by user input this will get the closest stop 
+\begin{DoxyParams}{Parameters}
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_ac8bfb82faa796f8f51cb5db588eca3f8}\label{classdistance__graph_ac8bfb82faa796f8f51cb5db588eca3f8}} 
+\index{distance\_graph@{distance\_graph}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily void distance\+\_\+graph\+::dijkstra (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})}
+
+using Dijkstra with \mbox{\hyperlink{class_min_heap}{Min\+Heap}} 
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdistance__graph_aa3aad7d322fb6bef2a542dfa18d9ccd2}\label{classdistance__graph_aa3aad7d322fb6bef2a542dfa18d9ccd2}} 
+\index{distance\_graph@{distance\_graph}!dijkstra\_distance@{dijkstra\_distance}}
+\index{dijkstra\_distance@{dijkstra\_distance}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{dijkstra\_distance()}{dijkstra\_distance()}}
+{\footnotesize\ttfamily int distance\+\_\+graph\+::dijkstra\+\_\+distance (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destination }\end{DoxyParamCaption})}
+
+this calculates the distance between two nodes 
+\begin{DoxyParams}{Parameters}
+{\em origin} & \\
+\hline
+{\em destination} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_a9b73644692c7e75a374ebb20adfb875c}\label{classdistance__graph_a9b73644692c7e75a374ebb20adfb875c}} 
+\index{distance\_graph@{distance\_graph}!dijkstra\_path@{dijkstra\_path}}
+\index{dijkstra\_path@{dijkstra\_path}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{dijkstra\_path()}{dijkstra\_path()}}
+{\footnotesize\ttfamily std\+::list$<$ int $>$ distance\+\_\+graph\+::dijkstra\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destination }\end{DoxyParamCaption})}
+
+this will give us the shortest paths between two nodes 
+\begin{DoxyParams}{Parameters}
+{\em origin} & \\
+\hline
+{\em destination} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_ad456a0a67c07b3f5f7233ae85c68c094}\label{classdistance__graph_ad456a0a67c07b3f5f7233ae85c68c094}} 
+\index{distance\_graph@{distance\_graph}!edges@{edges}}
+\index{edges@{edges}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{edges()}{edges()}}
+{\footnotesize\ttfamily void distance\+\_\+graph\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+it will define the edges of the graph \mbox{\Hypertarget{classdistance__graph_a696c8d415d41cb4e85ca82da09501f85}\label{classdistance__graph_a696c8d415d41cb4e85ca82da09501f85}} 
+\index{distance\_graph@{distance\_graph}!get\_index@{get\_index}}
+\index{get\_index@{get\_index}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{get\_index()}{get\_index()}}
+{\footnotesize\ttfamily int distance\+\_\+graph\+::get\+\_\+index (\begin{DoxyParamCaption}\item[{std\+::string}]{stop }\end{DoxyParamCaption})}
+
+this will get the index of a given stop code 
+\begin{DoxyParams}{Parameters}
+{\em stop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_ad79b110d2cafb837930eef734b9b3a0d}\label{classdistance__graph_ad79b110d2cafb837930eef734b9b3a0d}} 
+\index{distance\_graph@{distance\_graph}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string distance\+\_\+graph\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+unused, it\textquotesingle{}s basically inside the mappers method 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_a04628945d0b4776d737ec4d36327d7f3}\label{classdistance__graph_a04628945d0b4776d737ec4d36327d7f3}} 
+\index{distance\_graph@{distance\_graph}!haversine@{haversine}}
+\index{haversine@{haversine}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{haversine()}{haversine()}}
+{\footnotesize\ttfamily double distance\+\_\+graph\+::haversine (\begin{DoxyParamCaption}\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2 }\end{DoxyParamCaption})}
+
+this will apply the Haversine formula to compute the distances 
+\begin{DoxyParams}{Parameters}
+{\em lat1} & \\
+\hline
+{\em lon1} & \\
+\hline
+{\em lat2} & \\
+\hline
+{\em lon2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rad $\ast$ c 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_a0829300da336c38ab097f0a17aec9163}\label{classdistance__graph_a0829300da336c38ab097f0a17aec9163}} 
+\index{distance\_graph@{distance\_graph}!mappers@{mappers}}
+\index{mappers@{mappers}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{mappers()}{mappers()}}
+{\footnotesize\ttfamily std\+::string distance\+\_\+graph\+::mappers (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+gets the name of the stop 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}\label{classdistance__graph_a60ec335d0c421e6a29ebf3b6e4a093bd}} 
+\index{distance\_graph@{distance\_graph}!stops@{stops}}
+\index{stops@{stops}!distance\_graph@{distance\_graph}}
+\doxysubsubsection{\texorpdfstring{stops()}{stops()}}
+{\footnotesize\ttfamily void distance\+\_\+graph\+::stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+it reads the stops.\+csv file and associates each part to variable 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{distance__graph_8h}{distance\+\_\+graph.\+h}}\item 
+\mbox{\hyperlink{distance__graph_8cpp}{distance\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}
