@@ -24,7 +24,7 @@ void distance_graph::stops(){
     }
     getline(stops,first_line);
     for(int i=1;i<=n;i++){
-        map_stops=f2.stops_code(stops,n,map_stops);
+        map_stops=f2.stops_code(stops,i,map_stops);
         nodes[i].name=f2.stops_name(stops);
         nodes[i].zone=f2.stops_zone(stops);
         nodes[i].latitude=f2.stops_latitude(stops);
@@ -49,7 +49,7 @@ void distance_graph::edges() {
         getline(edges, string_n);
         line = f2.stops(edges);
         n = stoi(string_n);
-        for (int i = 2; i <= n + 1; i++) {                                //if something goes wrong, we should check here
+        for (int i = 2; i < n + 1; i++) {                                //if something goes wrong, we should check here
             first_stop = line;
             second_stop = f2.stops(edges);
             line = second_stop;
@@ -67,15 +67,13 @@ void distance_graph::edges() {
         getline(edges, string_n);
         line = f2.stops(edges);
         n = stoi(string_n);
-        for (int i = 2;
-             i <= n + 1; i++) {                                //if something goes wrong, we should check here
+        for (int i = 2;i < n + 1; i++) {                                //if something goes wrong, we should check here
             first_stop = line;
             second_stop = f2.stops(edges);
             line = second_stop;
             node_1 = map_stops[first_stop];
             node_2 = map_stops[second_stop];
-            distance = haversine(nodes[node_1].latitude, nodes[node_1].longitude, nodes[node_2].latitude,
-                                 nodes[node_2].longitude);
+            distance = haversine(nodes[node_1].latitude, nodes[node_1].longitude, nodes[node_2].latitude,nodes[node_2].longitude);
             addEdge(node_1, node_2, distance);
         }
         edges.close();

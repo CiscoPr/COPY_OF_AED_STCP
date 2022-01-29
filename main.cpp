@@ -61,10 +61,10 @@ int main() {
         graph.edges();
         index=graph.closeststop(latitude,longitude);
         destination_index=graph.get_index(destination);
-        //for(it=graph.dijkstra_path(index,destination_index).begin(); it!= graph.dijkstra_path(index,destination_index).end();it++){
-          //  stop=*it;
-            //std::cout<< stop << "\n";
-        //}
+        for(it=graph.dijkstra_path(index,destination_index).begin(); it!= graph.dijkstra_path(index,destination_index).end();it++){
+            stop=*it;
+            std::cout<< stop << "\n";
+        }
     }
     if(option == 2){
         double latitude, longitude;
