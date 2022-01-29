@@ -117,12 +117,11 @@ std::list<int> distance_graph::dijkstra_path(int origin, int destination) {
         path.push_front(v);
     }
     return path;
-
 }
 
 
 void distance_graph::dijkstra(int s) {
-    MinHeap<int, int> q(n, -1);
+    MinHeap<int, double> q(n, -1);
     for (int v= 1; v <= n; v++){
         nodes[v].dist = INF;
         q.insert(v, INF);
@@ -136,8 +135,8 @@ void distance_graph::dijkstra(int s) {
         nodes[u].visited = true;
         for(auto edge: nodes[u].adj){
             int v = edge.dest;
-            int w = edge.distance;
-            if(!nodes[u].visited && nodes[u].dist + w < nodes[v].dist){
+            double w = edge.distance;
+            if(!nodes[v].visited && nodes[u].dist + w < nodes[v].dist){
                 nodes[v].dist = nodes[u].dist + w;
                 q.decreaseKey(v, nodes[v].dist);
                 nodes[v].pred = u;
@@ -167,4 +166,8 @@ int distance_graph::closeststop(double latitude, double longitude){
         }
     }
     return index;
+}
+std::string distance_graph::mappers(int a){
+    string name=nodes[a].name;
+    return name;
 }

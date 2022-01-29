@@ -40,6 +40,7 @@ public:
     int closeststop(double latitude, double longitude);
     std::string get_name(int index);
     int get_index(std::string stop);
+    std::string mappers(int a);
 };
 
 

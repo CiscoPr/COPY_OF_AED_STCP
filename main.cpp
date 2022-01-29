@@ -40,6 +40,7 @@ int main() {
     std::cout << "                           Please enter your choice: ";
     std::cin >> option;
     if(option == 1){
+        std::list<int> path1;
         std::list<int>::iterator it;
         int index, destination_index;
         double latitude, longitude;
@@ -61,9 +62,10 @@ int main() {
         graph.edges();
         index=graph.closeststop(latitude,longitude);
         destination_index=graph.get_index(destination);
-        for(it=graph.dijkstra_path(index,destination_index).begin(); it!= graph.dijkstra_path(index,destination_index).end();it++){
-            stop=*it;
-            std::cout<< stop << "\n";
+        path1=graph.dijkstra_path(index,destination_index);
+        for(it=path1.begin(); it!= path1.end();it++){
+            int stop= *it;
+            std::cout<<graph.mappers(stop)<<"\n";
         }
     }
     if(option == 2){
