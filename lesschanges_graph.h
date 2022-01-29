@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <queue>
 
 class lesschanges_graph {
     struct Edge{
@@ -14,7 +15,7 @@ class lesschanges_graph {
 
     struct Node{
         std::list<Edge> adj;
-        //int dist;
+        int dist;
         int pred;
         std::string name;
         std::string zone;
@@ -30,7 +31,7 @@ class lesschanges_graph {
 public:
 
     lesschanges_graph(int stops, bool dir = true);
-    void bfs(int v);
+    std::queue<int> bfs(int start, int end);
     void stops();
     void edges();
     void addEdge(int src, int dest, double distance);

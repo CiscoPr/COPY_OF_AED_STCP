@@ -8,31 +8,49 @@
 #include "minHeap.h"
 #include "lesschanges_graph.h"
 #include <queue>
+#include <vector>
 
-
-
+filereader f3;
 
 lesschanges_graph::lesschanges_graph(int stops, bool dir): n(stops), hasDir(dir), nodes(stops + 1){}
 
-void lesschanges_graph::bfs(int v){
+queue<int> lesschanges_graph::bfs(int start, int end){
+    //vector<std::string> stops_vector;
+    std::queue<int> path;
     for(int v = 1; v <= n; v++)
         nodes[v].visited = false;
     queue<int> q;
-    q.push(v);
-    nodes[v].visited = true;
+    nodes[start].dist = 0;
+    q.push(start);
+    nodes[start].visited = true;
+    //stops_vector.push_back(nodes[v].name);
     while(!q.empty()){
         int u = q.front();
         q.pop();
-        cout << u << " ";
+        path = q;
+        int node = q.back();
+        if(node == end)
+            return path;
+        /*
+        cout << u << " at distance of " << nodes[u].dist << endl;
         for(auto e: nodes[u].adj){
             int w = e.dest;
             if(!nodes[w].visited){
                 q.push(w);
                 nodes[w].visited;
+                nodes[w].dist = nodes[u].dist + 1;
             }
+        */
         }
-    }
 }
+
+
+
+
+
+
+
+
 
 
 /*
