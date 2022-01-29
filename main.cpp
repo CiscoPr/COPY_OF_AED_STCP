@@ -9,7 +9,6 @@
 #include <climits>
 #include <cmath>
 
-//! this will be the function with the menu_trip
 int main() {
     int option;
     filereader f1;
